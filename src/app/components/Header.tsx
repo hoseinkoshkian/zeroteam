@@ -4,14 +4,14 @@ import Button from "@shared/Button";
 export default function Header() {
   return (
     <header className="py-10 ">
-      <div className="flex gap-5 items-center text-sm">
+      <div className="flex gap-5 items-center text-sm justify-between">
         <Image
           alt="zeroteam-logo"
           src={"/logo.svg"}
           height={100}
           width={100}
         ></Image>
-        <nav className="nav-items flex gap-5 font-bold">
+        <nav className="nav-items flex gap-12 font-bold">
           <Link href="/dashboard">دوره های آموزشی</Link>
           <Link href="/dashboard">مسیرهای یادگیری</Link>
           <Link href="/dashboard">زیروبلاگ</Link>
@@ -19,14 +19,10 @@ export default function Header() {
           <Link href="/dashboard">درباره ما</Link>
           <Link href="/dashboard">تماس با ما</Link>
         </nav>
-        <Button val="فرصت کارآموزی" bg="blue" />
-        <Button val="ورود | ثبت نام" bg="yellow" />
-        {/* <button className="px-5 py-2 bg-z-yellow text-white rounded-lg">
-          فرصت کارآموی
-        </button>
-        <button className="px-5 py-2 bg-z-blue text-white rounded-lg">
-          فرصت کارآموی
-        </button> */}
+        <div className="flex gap-5">
+          <Button intent="blue" text="فرصت همکاری" />
+          <Button intent="yellow" text="ورود | ثبت نام" />
+        </div>
       </div>
     </header>
   );
