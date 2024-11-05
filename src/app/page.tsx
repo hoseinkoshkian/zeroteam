@@ -2,6 +2,7 @@ import LandingTitle from "@shared/LandingTitle";
 import Button from "./components/shared/Button";
 import coverImg from "../assets/coiver.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
+import OrderItem from "./components/OrderItem";
 export default function Main() {
   // console.log(coverImg)
   return (
@@ -75,7 +76,10 @@ export default function Main() {
         <LandingTitle text="پروژه های ما" intent="yellow" />
         
       </section>
-      <section id="cooperation-path"></section>
+      <section id="cooperation-path">
+      <LandingTitle text="مسیر همکاری" intent="blue" />
+      <OrderItem />
+      </section>
     </main>
   );
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Button from "@shared/Button";
 export default function Header() {
   return (
-    <header className="py-10 ">
+    <header className="py-10  ">
       <div className="flex gap-5 items-center text-sm justify-between">
         <Image
           alt="zeroteam-logo"
