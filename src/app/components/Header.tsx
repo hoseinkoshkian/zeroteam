@@ -11,7 +11,7 @@ export default function Header() {
           height={100}
           width={100}
         ></Image>
-        <nav className="nav-items flex gap-12 font-bold">
+        <nav className="nav-items flex gap-20 justify-center font-bold">
           <Link href="/dashboard">دوره های آموزشی</Link>
           <Link href="/dashboard">مسیرهای یادگیری</Link>
           <Link href="/dashboard">زیروبلاگ</Link>

@@ -22,7 +22,8 @@
     "paths": {
       "@/*": ["./src/app/*"],
       "@shared/*": ["./src/app/components/shared/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/app/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
