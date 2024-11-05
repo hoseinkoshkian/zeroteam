@@ -40,30 +40,34 @@ export default function Main() {
       </section>
       <section id="why-zero" className="flex flex-col gap-20">
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
-        <div className="boxes grid grid-cols-2 m-auto w-auto gap-10">
+        <div className="boxes grid grid-cols-2 m-auto w-auto gap-14">
           <BoxItem
             intent={"yellow"}
             title="تجربـــــــــــــــــــــــــــــــه"
             text="سال‌ها تجربه در زمینه توسعه نرم‌افزار و کار با صنایع مختلف."
-            size={350}
+            size={400}
+            icon="lamp"
           />
           <BoxItem
             intent={"blue"}
             title="تخصـــــــــــــــــــــص"
-            text="سال‌ها تجربه در زمینه توسعه نرم‌افزار و کار با صنایع مختلف."
-            size={350}
+            text="تیمی متشکل از متخصصین با مهارت‌های متنوع در برنامه‌نویسی و طراحی"
+            size={400}
+            icon="tool"
           />
           <BoxItem
             intent={"blue"}
             title="تحویل به موقــــــــــع"
-            text="سال‌ها تجربه در زمینه توسعه نرم‌افزار و کار با صنایع مختلف."
-            size={350}
+            text="ما به زمانبندی اهمیت می‌دهیم و پروژه‌ها را در زمان معین تحویل می‌دهیم."
+            size={400}
+            icon="time"
           />
           <BoxItem
             intent={"yellow"}
             title="رویکرد مشتری‌مدار"
-            text="سال‌ها تجربه در زمینه توسعه نرم‌افزار و کار با صنایع مختلف."
-            size={350}
+            text="ارتباط نزدیک با مشتریان و توجه به نیازهای آن‌ها در تمام مراحل پروژه."
+            size={400}
+            icon="customer"
           />
         </div>
       </section>
