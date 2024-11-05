@@ -73,6 +73,7 @@ export default function Main() {
       </section>
       <section id="projects">
         <LandingTitle text="پروژه های ما" intent="yellow" />
+        
       </section>
       <section id="cooperation-path"></section>
     </main>
