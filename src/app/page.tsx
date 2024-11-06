@@ -2,7 +2,7 @@ import LandingTitle from "@shared/LandingTitle";
 import Button from "./components/shared/Button";
 import coverImg from "../assets/coiver.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
-import OrderItem from "./components/OrderItem";
+import OrderItem from "./components/OrderItems/OrderItem";
 export default function Main() {
   // console.log(coverImg)
   return (
@@ -77,9 +77,11 @@ export default function Main() {
       <section id="projects">
         <LandingTitle text="پروژه های ما" intent="yellow" />
       </section>
-      <section id="cooperation-path">
+      <section className="" id="cooperation-path">
         <LandingTitle text="مسیر همکاری" intent="blue" />
-        <OrderItem />
+        <OrderItem text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم." title="شناخت نیاز ها" intent={"reqs"} number={1} dir={true} />
+        <OrderItem text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم." title="شناخت نیاز ها" intent={"reqs"} number={1} dir={true} />
+        <OrderItem text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم." title="شناخت نیاز ها" intent={"reqs"} number={1} dir={true} />
       </section>
     </main>
   );
