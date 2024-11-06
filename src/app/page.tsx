@@ -9,20 +9,21 @@ export default function Main() {
     <main className="flex flex-col gap-20">
       <section
         id="hero-section"
-        className="flex py-20 items-center justify-center gap-20"
+        className="flex py-20 items-center justify-center gap-20 sm:flex-col-reverse sm:gap-5"
       >
-        <div className="hero-right flex flex-col gap-10">
-          <h1 className="font-heavy text-6xl leading-relaxed text-nowrap">
+        <div className="flex flex-col gap-10">
+          <h1 className="font-heavy text-6xl leading-relaxed text-nowrap sm:hidden">
             همه چیز از یک <span className="text-z-yellow">صفر</span> <br />
             شروع شـــــــــــــد
           </h1>
+          <h1 className="lg:hidden"> همه چیز از یک صفر شروع شد</h1>
           <div className="call-to-actions flex gap-5 justify-center">
             <Button text="مسیر یادگیری" intent="blue" />
             <Button text="مشاوره رایگان" intent="outlineY" />
           </div>
         </div>
 
-        <div className="hero-left w-1/2">
+        <div className="w-1/2 sm:w-full">
           <video
             preload="none"
             className=" h-full rounded-2xl overflow-hidden"
@@ -39,7 +40,8 @@ export default function Main() {
           </video>
         </div>
       </section>
-      <section id="why-zero" className="flex flex-col gap-20">
+      {/* test */}
+      <section id="why-zero" className="flex flex-col gap-20 sm:hidden">
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes grid grid-cols-2 m-auto w-auto gap-14">
           <BoxItem
@@ -74,11 +76,10 @@ export default function Main() {
       </section>
       <section id="projects">
         <LandingTitle text="پروژه های ما" intent="yellow" />
-        
       </section>
       <section id="cooperation-path">
-      <LandingTitle text="مسیر همکاری" intent="blue" />
-      <OrderItem />
+        <LandingTitle text="مسیر همکاری" intent="blue" />
+        <OrderItem />
       </section>
     </main>
   );
