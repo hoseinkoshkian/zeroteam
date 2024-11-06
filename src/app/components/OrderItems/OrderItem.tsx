@@ -38,12 +38,12 @@ export default function OrderItem(
 ) {
   // let content : ReactElement = dir ? 
   return (
-    <div id="order-item-container" className={`relative  w-[80%] flex justify-center items-center  mx-auto`} {...props}>
+    <div id="order-item-container" className={`relative  w-[80%] flex justify-center items-center  mx-auto ${dir ? "" : "flex-row-reverse"}`} {...props}>
       <div className=" absolute top-0 rounded-[50%] bg-white z-10  min-w-12 min-h-12 w-12 h-12 border-4 border-z-blue flex-grow  flex justify-center items-center  text-z-blue text-xl font-semibold">{number}</div>
 
      <div className="w-1/2">
 
-      <div className="w-full flex justify-between items-center  relative ">
+      <div className={`w-full flex justify-between items-center  relative ${dir ? "" : "flex-row-reverse"}`}>
 
         <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow">{title}</h5>
         <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
@@ -52,7 +52,7 @@ export default function OrderItem(
 
       
 
-     <div className=" leading-loose text-justify w-full p-8 border-l-[4px] border-z-yellow  ">
+     <div className={`leading-loose text-justify w-full p-8 ${dir ? "border-l-[4px]" : "border-r-[4px]"} border-z-yellow  `}>
       
      {text}
       
