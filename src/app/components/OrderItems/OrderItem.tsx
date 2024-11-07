@@ -40,7 +40,7 @@ export default function OrderItem({
   extra,
   ...props
 }: OrderItem) {
-  console.log(PN.convertEnToPe("123"))
+  // console.log(PN.convertEnToPe("234567"))
   // let content : ReactElement = dir ?
   return (
     <div
@@ -51,7 +51,7 @@ export default function OrderItem({
       {...props}
     >
       <div className=" absolute top-0 rounded-[50%] bg-white z-10  min-w-12 min-h-12 w-12 h-12 border-4 border-z-blue flex-grow  flex justify-center items-center  text-z-blue text-xl font-semibold">
-        {number}
+        {PN.convertEnToPe(number)}
       </div>
 
       <div className="w-1/2">
