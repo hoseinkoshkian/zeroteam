@@ -8,7 +8,6 @@ import PN from "persian-number";
 
 import { cva, VariantProps } from "class-variance-authority";
 import { ElProps } from "src/types/types";
-// import { ReactElement } from "react";
 
 interface OrderItem extends VariantProps<typeof OrderItemStyles>, ElProps {
   title: string;
@@ -43,46 +42,95 @@ export default function OrderItem({
   // console.log(PN.convertEnToPe("234567"))
   // let content : ReactElement = dir ?
   return (
-    <div
-      id="order-item-container"
-      className={`relative  w-[80%] flex justify-center items-center  mx-auto ${
-        dir ? "" : "flex-row-reverse"
-      }`}
-      {...props}
-    >
-      <div className=" absolute top-0 rounded-[50%] bg-white z-10  min-w-12 min-h-12 w-12 h-12 border-4 border-z-blue flex-grow  flex justify-center items-center  text-z-blue text-xl font-semibold">
-        {PN.convertEnToPe(number)}
-      </div>
+    <>
+      {/* desktop */}
+      <div
+        id="order-item-container"
+        className={`hidden relative lg:w-[80%] lg:flex justify-center items-center  mx-auto ${
+          dir ? "" : "flex-row-reverse"
+        }`}
+        {...props}
+      >
+        <div className="absolute top-0 rounded-[50%] bg-white z-10  min-w-12 min-h-12 w-12 h-12 border-4 border-z-blue flex-grow  flex justify-center items-center  text-z-blue text-xl font-semibold">
+          {PN.convertEnToPe(number)}
+        </div>
 
-      <div className="w-1/2">
+        <div className="w-1/2">
+          <div
+            className={`w-full flex justify-between items-center  relative ${
+              dir ? "" : "flex-row-reverse"
+            }`}
+          >
+            <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow font-bold">
+              {title}
+            </h5>
+            <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
+          </div>
+
+          <div className={`leading-loose text-justify w-full p-8`}>{text}</div>
+        </div>
+        <div className="w-1/2 px-4 py-2 ">
+          <Image
+            className="mx-auto "
+            alt="zeroteam-logo"
+            src={OrderItemStyles({ intent })}
+            height={150}
+            width={150}
+          ></Image>
+        </div>
         <div
-          className={`w-full flex justify-between items-center  relative ${
-            dir ? "" : "flex-row-reverse"
+          className={`absolute h-full w-1 left-1/2 top-0 bg-z-yellow z-1`}
+        ></div>
+      </div>
+      {/* mobile */}
+      <div
+        id="order-item-container"
+        className={`lg:hidden relative flex-col justify-center items-center  mx-auto ${
+          dir ? "" : "flex-row-reverse"
+        }`}
+        {...props}
+      >
+        <div
+          className={`absolute -top-1 rounded-[50%] bg-white z-10  min-w-12 min-h-12 w-12 h-12 border-4 border-z-blue flex-grow  flex justify-center items-center text-z-blue text-xl font-semibold ${
+            dir ? "left-0" : "right-0"
           }`}
         >
-          <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow">
-            {title}
-          </h5>
-          <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
+          {PN.convertEnToPe(number)}
         </div>
 
-        <div
-          className={`leading-loose text-justify w-full p-8 ${
-            dir ? "border-l-[4px]" : "border-r-[4px]"
-          } border-z-yellow  `}
-        >
-          {text}
+        <div className="">
+          <div
+            className={`w-full flex justify-between items-center  relative ${
+              dir ? "" : "flex-row-reverse"
+            } `}
+          >
+            <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow z-50 font-bold">
+              {title}
+            </h5>
+            <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
+          </div>
+
+          <div
+            className={`leading-loose text-justify ${
+              dir ? "pr-5 pl-12" : "pl-5 pr-12"
+            }  py-5 flex flex-col gap-4`}
+          >
+            {text}
+            <Image
+              className="mx-auto "
+              alt="zeroteam-logo"
+              src={OrderItemStyles({ intent })}
+              height={150}
+              width={150}
+            ></Image>
+          </div>
         </div>
+        <div
+          className={`absolute h-full w-1 ${
+            dir ? "left-[22px]" : "right-[22px]"
+          } top-0 bg-z-yellow z-1`}
+        ></div>
       </div>
-      <div className="w-1/2 px-4 py-2 ">
-        <Image
-          className="mx-auto "
-          alt="zeroteam-logo"
-          src={OrderItemStyles({ intent })}
-          height={150}
-          width={150}
-        ></Image>
-      </div>
-    </div>
+    </>
   );
 }
