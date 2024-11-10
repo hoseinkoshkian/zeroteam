@@ -85,7 +85,7 @@ export default function OrderItem({
       {/* mobile */}
       <div
         id="order-item-container"
-        className={`lg:hidden relative flex-col justify-center items-center  mx-auto ${
+        className={`lg:hidden w-[95%] relative flex-col justify-center items-center  mx-auto ${
           dir ? "" : "flex-row-reverse"
         }`}
         {...props}

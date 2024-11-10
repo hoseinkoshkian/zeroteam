@@ -3,6 +3,7 @@ import Button from "./components/shared/Button";
 import coverImg from "../assets/coiver.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "./components/OrderItems/OrderItem";
+import ProjectSlider from "./components/Project Slider/ProjectSlider";
 export default function Main() {
   // console.log(coverImg)
   return (
@@ -74,8 +75,9 @@ export default function Main() {
           />
         </div>
       </section>
-      <section id="projects">
+      <section id="projects" className="flex flex-col gap-20 relative">
         <LandingTitle text="پروژه های ما" intent="yellow" />
+        <ProjectSlider />
       </section>
       <section className="flex flex-col gap-10" id="cooperation-path">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
