@@ -9,7 +9,7 @@ import srcreenImg from "./screen.png";
 export default function ProjectSlider() {
   // const [  ]
   return (
-    <div className="flex justify-center gap-10 flex-nowrap w-full overflow-x-scroll">
+    <div className="flex justify-center gap-10 flex-nowrap w-full">
       <Link href={"/"} className="flex justify-center w-max mx-auto">
         <Image
           className="border-[8px] border-z-blue rounded-2xl"

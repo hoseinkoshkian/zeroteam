@@ -7,27 +7,33 @@ import ProjectSlider from "./components/Project Slider/ProjectSlider";
 export default function Main() {
   // console.log(coverImg)
   return (
-    <main className="flex flex-col gap-20">
+    <main className="flex flex-col gap-16 lg:gap-20">
       <section
         id="hero-section"
-        className="flex py-20 items-center justify-center gap-20 sm:flex-col-reverse sm:gap-5"
+        className="flex flex-col-reverse pt-20 items-center justify-center gap-10 lg:flex-row lg:gap-20"
       >
-        <div className="flex flex-col gap-10">
-          <h1 className="font-heavy text-6xl leading-relaxed text-nowrap sm:hidden">
+        <div className="flex flex-col gap-5 lg:gap-10">
+          <h1 className="font-heavy text-6xl leading-relaxed text-nowrap hidden lg:block">
             همه چیز از یک <span className="text-z-yellow">صفر</span> <br />
             شروع شـــــــــــــد
           </h1>
-          <h1 className="lg:hidden"> همه چیز از یک صفر شروع شد</h1>
+          <h1 className="font-mostbold lg:hidden text-2xl">
+            {" "}
+            همه چیز از یک <span className="text-z-yellow">صفر</span> شروع شد
+          </h1>
           <div className="call-to-actions flex gap-5 justify-center">
             <Button text="مسیر یادگیری" intent="blue" />
             <Button text="مشاوره رایگان" intent="outlineY" />
           </div>
         </div>
 
-        <div className="w-1/2 sm:w-full">
+        <div className="w-full">
           <video
+            width="320"
+            height="240"
+            // controls
             preload="none"
-            className=" h-full rounded-2xl overflow-hidden"
+            className="h-full w-full mx-auto rounded-2xl overflow-hidden object-cover"
             poster={coverImg.src}
           >
             <source src="/path/to/video.mp4" type="video/mp4" />
