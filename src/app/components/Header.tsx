@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@shared/Button";
+import { Icon } from "@iconify/react";
 export default function Header() {
   return (
     <>
@@ -29,15 +30,22 @@ export default function Header() {
           </div>
         </div>
       </header>
-      {/* mobile  */}
-      {/* <header className="lg:hidden p-5 border-b-2">
+      {/* mobile */}
+      <header className="lg:hidden py-8 grid grid-cols-3 items-center">
+        <Icon
+          icon="heroicons:bars-3-bottom-right-solid"
+          width={45}
+          height={45}
+          className="col-span-1 bg-[#EBEBEB] p-2 rounded-lg text-z-content"
+        />
         <Image
           alt="zeroteam-logo"
           src={"/logo.svg"}
-          height={100}
-          width={100}
+          height={110}
+          width={110}
+          className="col-span-2"
         ></Image>
-      </header> */}
+      </header>
     </>
   );
 }
