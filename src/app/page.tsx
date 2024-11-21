@@ -10,7 +10,7 @@ export default function Main() {
     <main className="flex flex-col gap-16 lg:gap-20">
       <section
         id="hero-section"
-        className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-20"
+        className="flex flex-col-reverse gl:pt-4 items-center justify-center gap-10 lg:flex-row lg:gap-20"
       >
         <div className="flex flex-col gap-5 lg:gap-10">
           <h1 className="font-heavy text-6xl leading-relaxed text-nowrap hidden lg:block">
@@ -81,7 +81,7 @@ export default function Main() {
           />
         </div>
       </section>
-      <section id="projects" className="flex flex-col gap-20 relative">
+      <section id="projects" className="flex flex-col gap-10 lg:gap-20 relative">
         <LandingTitle text="پروژه های ما" intent="yellow" />
         <ProjectSlider />
       </section>
