@@ -104,12 +104,12 @@ export default function ProjectSlider() {
   }
   return (
     <>
-      {/* Desktop */}
       <div
         id="slider-container"
-        className="h-[280px] overflow-y-hidden lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex gap-3 flex-nowrap overflow-x-auto relative items-center"
+        className="overflow-y-hidden scrollbar scrollbar-thumb-z-blue scrollbar-track-current lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex gap-3 flex-nowrap overflow-x-auto relative items-center"
         onTouchStart={handleAnimation}
       >
+        {/* Desktop */}
         <Icon
           icon="ph:caret-circle-right-fill"
           width={50}
@@ -120,13 +120,11 @@ export default function ProjectSlider() {
         <motion.div
           className="absolute left-0 top-[25%] lg:hidden text-z-blue"
           initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
           animate={
             isAnimating
               ? { x: [-20, 150], opacity: [0, 10, 50, 80, 100, 80, 50, 10, 0] }
               : {}
           }
-          // style={{ x: 100 }}
           transition={{
             type: "keyframes",
             ease: "easeInOut",
