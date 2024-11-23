@@ -3,10 +3,10 @@
 import React, { useEffect } from "react";
 // import { useRef } from "react";
 import { useState } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import screenImg from "./screen.png";
+// import screenImg from "./screen.png";
 import screen1 from "./screen-1.png";
 import screen2 from "./screen-2.png";
 import screen3 from "./screen-3.png";
@@ -20,7 +20,7 @@ interface ProjectsDataInterface {
 type ProjectDataType = ProjectsDataInterface[];
 const ProjectsData: ProjectDataType = [
   {
-    src: screenImg.src,
+    src: screen1.src,
     title: "لوکسیک",
   },
   {
@@ -47,7 +47,7 @@ export default function ProjectSlider() {
   //   setHydrated(true);
   // }, []);
 
-  console.log(index, before, after);
+  // console.log(index, before, after);
   const handleRightClick = () => {
     // const total = ProjectsData.length;
     const last = ProjectsData.length - 1;
@@ -95,12 +95,20 @@ export default function ProjectSlider() {
     }
   };
 
+  // if (!hydrated) {
+  //   return "loading"; // or a loading spinner
+  // }
+  const [isAnimating, setIsAnimating] = useState(true);
+  function handleAnimation() {
+    setIsAnimating(false);
+  }
   return (
     <>
       {/* Desktop */}
       <div
         id="slider-container"
-        className="lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory pb-4 scroll-smooth flex gap-3 flex-nowrap overflow-x-auto relative"
+        className="h-[280px] overflow-y-hidden lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex gap-3 flex-nowrap overflow-x-auto relative items-center"
+        onTouchStart={handleAnimation}
       >
         <Icon
           icon="ph:caret-circle-right-fill"
@@ -109,19 +117,28 @@ export default function ProjectSlider() {
           className="hidden lg:block mb-5 text-z-yellow right-0 cursor-pointer"
           onClick={handleRightClick}
         />
-        {/* <motion.div
-          className="absolute lg:hidden"
+        <motion.div
+          className="absolute left-0 top-[25%] lg:hidden text-z-blue"
           initial={{ opacity: 0 }}
-          animate={{ x: 200, opacity: [100, 0] }}
-          transition={{ duration: 1, repeat: Infinity }}
+          // whileInView={{ opacity: 1 }}
+          animate={
+            isAnimating
+              ? { x: [-20, 150], opacity: [0, 10, 50, 80, 100, 80, 50, 10, 0] }
+              : {}
+          }
+          // style={{ x: 100 }}
+          transition={{
+            type: "keyframes",
+            ease: "easeInOut",
+            duration: 2,
+            repeat: isAnimating ? Infinity : 0,
+            repeatType: "loop",
+          }}
+          exit={{}}
         >
-          <Icon
-            icon="ph:hand-swipe-right"
-            width={50}
-            height={50}
-            className="absolute left-0 top-1/3"
-          />
-        </motion.div> */}
+          <Icon icon="ph:hand-tap-fill" width={80} height={80} className="" />
+          <span>اسکرول کنید</span>
+        </motion.div>
 
         <div id="slides" className="hidden lg:flex lg:items-center lg:relative">
           <Link
@@ -172,10 +189,10 @@ export default function ProjectSlider() {
           onClick={handleLeftClick}
         />
         {/* MOBILE */}
-        {ProjectsData.map((s) => (
-          <Link
-            href={"/"}
-            className="project-items lg:hidden flex flex-col items-center font-bold gap-3"
+        {ProjectsData.map((s, i) => (
+          <div
+            key={i}
+            className="project-items lg:hidden flex flex-col items-center font-bold gap-3 h-max"
           >
             <Image
               className="border-[8px] border-z-blue rounded-2xl"
@@ -185,7 +202,7 @@ export default function ProjectSlider() {
               alt="portfolio"
             ></Image>
             <div>{s.title}</div>
-          </Link>
+          </div>
         ))}
       </div>
     </>
