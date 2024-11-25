@@ -4,6 +4,7 @@ import coverImg from "../assets/coiver.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "./components/OrderItems/OrderItem";
 import ProjectSlider from "./components/Project Slider/ProjectSlider";
+import Paths from "./components/OrderItems/Paths";
 export default function Main() {
   // console.log(coverImg)
   return (
@@ -27,11 +28,10 @@ export default function Main() {
           </div>
         </div>
 
-        <div className="w-full">
+        <div className="">
           <video
             width="1920"
             height="1080"
-            // controls
             preload="none"
             className="mx-auto rounded-2xl overflow-hidden object-cover"
             poster={coverImg.src}
@@ -80,74 +80,19 @@ export default function Main() {
           />
         </div>
       </section>
-      <section id="projects" className="flex flex-col gap-10 lg:gap-20 relative">
+      <section
+        id="projects"
+        className="flex flex-col gap-10 lg:gap-20 relative"
+      >
         <LandingTitle text="پروژه های ما" intent="yellow" />
         <ProjectSlider />
       </section>
       <section className="flex flex-col gap-10" id="cooperation-path">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
-        {/* desktop */}
-        <div className="path-items hidden lg:block">
-          <OrderItem
-            text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
-            title="شناخت نیاز ها"
-            intent={"reqs"}
-            number={1}
-            dir={true}
-          />
-          <OrderItem
-            text="نسبت به شرایط و نیازهای مرحله قبلی طراحی مفهومی یا طراحی بصری با توجه به هویت برند شما انجام میشه. طراحی کامپوننت های پایه ، طراحی herosection ها ، طراحی صفحات پایه و اصلی و هر آنچه در نگاه کاربر جلوه خواهد کرد"
-            title="طراحی مفهومی"
-            intent={"design"}
-            number={2}
-            dir={false}
-          />
-          <OrderItem
-            text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
-            title="توسعه پیاده سازی و تست"
-            intent={"develop"}
-            number={3}
-            dir={true}
-          />
-          <OrderItem
-            text="مهم ترین مرحله هر نرم افزار یا محصول تولید شده به قسمت نگهداری maintain اون برمیگرده که در مجموعه برنامه نویسی zeroteam سعی شده بیشترین سرمایه در این قسمت صرف شود .."
-            title="پشتیبانی و آموزش"
-            intent={"support"}
-            number={4}
-            dir={false}
-          />
-        </div>
-        {/* mobile */}
-        <div className="path-items flex flex-col gap-0 lg:hidden">
-          <OrderItem
-            text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
-            title="شناخت نیاز ها"
-            intent={"reqs"}
-            number={1}
-            dir={true}
-          />
-          <OrderItem
-            text="نسبت به شرایط و نیازهای مرحله قبلی طراحی مفهومی یا طراحی بصری با توجه به هویت برند شما انجام میشه. طراحی کامپوننت های پایه ، طراحی herosection ها ، طراحی صفحات پایه و اصلی و هر آنچه در نگاه کاربر جلوه خواهد کرد"
-            title="طراحی مفهومی"
-            intent={"design"}
-            number={2}
-            dir={false}
-          />
-          <OrderItem
-            text="در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
-            title="توسعه پیاده سازی و تست"
-            intent={"develop"}
-            number={3}
-            dir={true}
-          />
-          <OrderItem
-            text="مهم ترین مرحله هر نرم افزار یا محصول تولید شده به قسمت نگهداری maintain اون برمیگرده که در مجموعه برنامه نویسی zeroteam سعی شده بیشترین سرمایه در این قسمت صرف شود .."
-            title="پشتیبانی و آموزش"
-            intent={"support"}
-            number={4}
-            dir={false}
-          />
-        </div>
+        {/* Desktop */}
+        <Paths extra="path-items hidden lg:block" />
+        {/* Mobile */}
+        <Paths extra="path-items flex flex-col gap-0 lg:hidden" />
       </section>
     </main>
   );

@@ -5,6 +5,7 @@ import design from "./design.png";
 import develop from "./develop.png";
 import support from "./support.png";
 import PN from "persian-number";
+import { motion } from "framer-motion";
 
 import { cva, VariantProps } from "class-variance-authority";
 import { ElProps } from "src/types/types";
@@ -39,8 +40,6 @@ export default function OrderItem({
   extra,
   ...props
 }: OrderItem) {
-  // console.log(PN.convertEnToPe("234567"))
-  // let content : ReactElement = dir ?
   return (
     <>
       {/* desktop */}
@@ -64,6 +63,16 @@ export default function OrderItem({
             <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow font-bold">
               {title}
             </h5>
+            {/* <motion.div
+              style={{
+                backgroundColor: "black",
+                height: "2px",
+                width: "0px",
+              }}
+              initial={{ width: 0 }}
+              animate={{ width: "200px" }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+            >sdf</motion.div> */}
             <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
           </div>
 
