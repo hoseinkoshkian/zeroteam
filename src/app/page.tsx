@@ -29,11 +29,11 @@ export default function Main() {
 
         <div className="w-full">
           <video
-            width="320"
-            height="240"
+            width="1920"
+            height="1080"
             // controls
             preload="none"
-            className="h-full w-full mx-auto rounded-2xl overflow-hidden object-cover"
+            className="mx-auto rounded-2xl overflow-hidden object-cover"
             poster={coverImg.src}
           >
             <source src="/path/to/video.mp4" type="video/mp4" />
@@ -47,7 +47,6 @@ export default function Main() {
           </video>
         </div>
       </section>
-      {/* test */}
       <section id="why-zero" className="flex flex-col gap-20 sm:hidden">
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes grid grid-cols-2 m-auto w-auto gap-14">

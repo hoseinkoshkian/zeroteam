@@ -1,18 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
-// import { useRef } from "react";
+import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-// import screenImg from "./screen.png";
 import screen1 from "./screen-1.png";
 import screen2 from "./screen-2.png";
 import screen3 from "./screen-3.png";
 import "./style.css";
 import { Icon } from "@iconify/react/dist/iconify.js";
-// import { useAnimate } from "motion/react";
 interface ProjectsDataInterface {
   src: string;
   title: string;
@@ -40,14 +37,6 @@ export default function ProjectSlider() {
   const [index, setIndex] = useState(0);
   const [before, setBefore] = useState(ProjectsData.length - 1);
   const [after, setAfter] = useState(index + 1);
-  // const [data, setData] = useState<ProjectDataType>([]);
-  // const [hydrated, setHydrated] = useState(false);
-  // useEffect(() => {
-  //   setData(ProjectsData);
-  //   setHydrated(true);
-  // }, []);
-
-  // console.log(index, before, after);
   const handleRightClick = () => {
     // const total = ProjectsData.length;
     const last = ProjectsData.length - 1;
@@ -95,9 +84,6 @@ export default function ProjectSlider() {
     }
   };
 
-  // if (!hydrated) {
-  //   return "loading"; // or a loading spinner
-  // }
   const [isAnimating, setIsAnimating] = useState(true);
   function handleAnimation() {
     setIsAnimating(false);
@@ -106,7 +92,7 @@ export default function ProjectSlider() {
     <>
       <div
         id="slider-container"
-        className="overflow-y-hidden scrollbar scrollbar-thumb-z-blue scrollbar-track-current lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex gap-3 flex-nowrap overflow-x-auto relative items-center"
+        className="pb-4 flex-shrink-0 grow-0 overflow-y-hidden scrollbar scrollbar-thumb-z-blue scrollbar-track-current lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex space-x-4 flex-nowrap overflow-x-auto relative items-center"
         onTouchStart={handleAnimation}
       >
         {/* Desktop */}
@@ -122,7 +108,7 @@ export default function ProjectSlider() {
           initial={{ opacity: 0 }}
           animate={
             isAnimating
-              ? { x: [-20, 150], opacity: [0, 10, 50, 80, 100, 80, 50, 10, 0] }
+              ? { x: [-20, 200], opacity: [0, 10, 50, 80, 100, 80, 50, 10, 0] }
               : {}
           }
           transition={{
@@ -190,13 +176,13 @@ export default function ProjectSlider() {
         {ProjectsData.map((s, i) => (
           <div
             key={i}
-            className="project-items lg:hidden flex flex-col items-center font-bold gap-3 h-max"
+            className="project-items lg:hidden flex flex-col items-center font-bold gap-3"
           >
             <Image
               className="border-[8px] border-z-blue rounded-2xl"
               src={s.src}
-              width={450}
-              height={450}
+              width={1920}
+              height={1080}
               alt="portfolio"
             ></Image>
             <div>{s.title}</div>

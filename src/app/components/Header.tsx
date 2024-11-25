@@ -41,8 +41,8 @@ export default function Header() {
         <Image
           alt="zeroteam-logo"
           src={"/logo.svg"}
-          height={110}
-          width={110}
+          height={50}
+          width={120}
           className="col-span-2"
         ></Image>
       </header>
