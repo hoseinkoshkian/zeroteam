@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import type { Viewport } from "next";
-
+import StyledComponentsRegistry from "./lib/registery";
 export const metadata: Metadata = {
   title: "zeroteam",
   description: "تیم برنامه نویسی",
@@ -24,11 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="w-[90%] mx-auto text-z-content overflow-hidden">
-        <Header />
-        {children}
-        <Footer></Footer>
-      </body>
+      <StyledComponentsRegistry>
+        <body className="w-[90%] mx-auto text-z-content">
+          <Header />
+          {children}
+          <Footer></Footer>
+        </body>
+      </StyledComponentsRegistry>
     </html>
   );
 }

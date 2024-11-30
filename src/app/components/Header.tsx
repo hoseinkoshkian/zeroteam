@@ -1,11 +1,26 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@shared/Button";
 import { Icon } from "@iconify/react";
-export function SideBar() {
+import { useRef, useState } from "react";
+import React, { SetStateAction } from "react";
+// import SetStateAction
+type SideBarProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+};
+export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
+  function handleClick() {
+    setIsOpen(false);
+  }
   return (
-    <div className="z-[1000] bg-[#ffffffcf] absolute lg:hidden w-full h-screen py-5">
-      <div className="bg-white border border-z-border opacity-100 rounded-xl w-[70%] h-full flex flex-col gap-5 p-4">
+    <div
+      className={`${
+        isOpen ? "" : "hidden"
+      } z-[1000] bg-[#ffffffcf] fixed lg:hidden w-full h-screen py-5`}
+    >
+      <div className="bg-white border border-z-border opacity-100 rounded-xl w-[80%] h-full flex flex-col gap-5 p-4">
         <div className="side-header flex justify-between">
           <Image
             alt="zeroteam-logo"
@@ -19,6 +34,7 @@ export function SideBar() {
             width={45}
             height={45}
             className="col-span-1 bg-z-border p-2 rounded-lg text-z-content"
+            onClick={handleClick}
           />
         </div>
         <div className="search-bar relative flex py-3 px-2 justify-between border border-z-border outline-none w-full rounded-lg">
@@ -97,9 +113,13 @@ export function SideBar() {
   );
 }
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  function handleClick() {
+    setIsOpen((prev) => !prev);
+  }
   return (
     <>
-      <SideBar />
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
       {/* desktop */}
       <header className="py-10 hidden lg:block">
         <div className="flex gap-5 items-center text-sm justify-between">
@@ -132,6 +152,7 @@ export default function Header() {
           width={45}
           height={45}
           className="col-span-1 bg-[#EBEBEB] p-2 rounded-lg text-z-content"
+          onClick={handleClick}
         />
         <Image
           alt="zeroteam-logo"
