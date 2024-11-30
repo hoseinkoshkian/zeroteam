@@ -30,8 +30,8 @@ export default function Main() {
 
         <div className="">
           <video
-            width="1920"
-            height="1080"
+            width="1200"
+            height="700"
             preload="none"
             className="mx-auto rounded-2xl overflow-hidden object-cover"
             poster={coverImg.src}
@@ -90,9 +90,10 @@ export default function Main() {
       <section className="flex flex-col gap-10" id="cooperation-path">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
-        <Paths extra="path-items hidden lg:block" />
+        <OrderItem text={"asdfds"} title={"title"} img={"design"} number={1} dir={true} />
+        {/* <Paths extra="path-items hidden lg:block" /> */}
         {/* Mobile */}
-        <Paths extra="path-items flex flex-col gap-0 lg:hidden" />
+        {/* <Paths extra="path-items flex flex-col gap-0 lg:hidden" /> */}
       </section>
     </main>
   );

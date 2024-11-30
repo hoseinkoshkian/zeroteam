@@ -5,34 +5,31 @@ import design from "./design.png";
 import develop from "./develop.png";
 import support from "./support.png";
 import PN from "persian-number";
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 
 import { cva, VariantProps } from "class-variance-authority";
 import { ElProps } from "src/types/types";
-
+type ButtonVariantProps = VariantProps<typeof OrderItemStyles>;
 interface OrderItem extends VariantProps<typeof OrderItemStyles>, ElProps {
   title: string;
   text: string;
   number: number;
   dir: boolean;
 }
-
+// type imgTypes = "reqs" | "design" | "develop" | "suppurt";
 const OrderItemStyles = cva("", {
   variants: {
-    intent: {
+    img: {
       reqs: reqs.src,
       design: design.src,
       develop: develop.src,
       support: support.src,
     },
-    defaultVariants: {
-      intent: "bg-z-blue",
-    },
   },
 });
 
 export default function OrderItem({
-  intent,
+  img,
   title,
   text,
   number,
@@ -60,19 +57,16 @@ export default function OrderItem({
               dir ? "" : "flex-row-reverse"
             }`}
           >
-            <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white flex-grow font-bold">
+            <h5 className="bg-z-blue min-w-fit px-5 py-2 rounded-lg text-white font-bold">
               {title}
             </h5>
             {/* <motion.div
-              style={{
-                backgroundColor: "black",
-                height: "2px",
-                width: "0px",
-              }}
-              initial={{ width: 0 }}
-              animate={{ width: "200px" }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-            >sdf</motion.div> */}
+              className="h-[4px] bg-z-blue border-none outline-none"
+              // whileInView={{ width: 0 }}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              // transition={{ duration: 2, ease: "easeInOut" }}
+            /> */}
             <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
           </div>
 
@@ -82,7 +76,7 @@ export default function OrderItem({
           <Image
             className="mx-auto "
             alt="zeroteam-logo"
-            src={OrderItemStyles({ intent })}
+            src={OrderItemStyles({ img })}
             height={150}
             width={150}
           ></Image>
@@ -92,7 +86,7 @@ export default function OrderItem({
         ></div>
       </div>
       {/* mobile */}
-      <div
+      {/* <div
         id="order-item-container"
         className={`lg:hidden w-[95%] relative flex-col justify-center items-center  mx-auto ${
           dir ? "" : "flex-row-reverse"
@@ -128,7 +122,7 @@ export default function OrderItem({
             <Image
               className="mx-auto "
               alt="zeroteam-logo"
-              src={OrderItemStyles({ intent })}
+              src={OrderItemStyles({ img })}
               height={150}
               width={150}
             ></Image>
@@ -139,7 +133,8 @@ export default function OrderItem({
             dir ? "left-[22px]" : "right-[22px]"
           } top-0 bg-z-yellow z-1`}
         ></div>
-      </div>
+      </div> */}
     </>
   );
 }
+export { type imgTypes, type ButtonVariantProps };
