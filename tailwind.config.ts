@@ -42,6 +42,7 @@ const config: Config = {
         "z-blue": "#2A4EEB",
         "z-yellow": "#EB8A2A",
         "z-content": "#3D3D3D",
+        "z-border" : "#EEEEEE"
       },
     },
   },

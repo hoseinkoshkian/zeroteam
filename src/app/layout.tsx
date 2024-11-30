@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="w-[90%] mx-auto text-z-content">
+      <body className="w-[90%] mx-auto text-z-content overflow-hidden">
         <Header />
         {children}
         <Footer></Footer>

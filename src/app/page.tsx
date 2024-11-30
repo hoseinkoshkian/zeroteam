@@ -4,7 +4,7 @@ import coverImg from "../assets/coiver.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "./components/OrderItems/OrderItem";
 import ProjectSlider from "./components/Project Slider/ProjectSlider";
-import Paths from "./components/OrderItems/Paths";
+// import Paths from "./components/OrderItems/Paths";
 export default function Main() {
   // console.log(coverImg)
   return (
@@ -90,7 +90,46 @@ export default function Main() {
       <section className="flex flex-col gap-10" id="cooperation-path">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
-        <OrderItem text={"asdfds"} title={"title"} img={"design"} number={1} dir={true} />
+        <div className="flex-col gap-0">
+          <OrderItem
+            title={"شناخت نیازها"}
+            text={
+              "در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
+            }
+            img={"reqs"}
+            number={1}
+            dir={true}
+          />
+          <OrderItem
+            title={"طراحی مفهومی"}
+            text={
+              "نسبت به شرایط و نیازهای مرحله قبلی طراحی مفهومی یا طراحی بصری با توجه به هویت برند شما انجام میشه. طراحی کامپوننت های پایه ، طراحی herosection ها ، طراحی صفحات پایه و اصلی و هر آنچه در نگاه کاربر جلوه خواهد کرد"
+            }
+            img={"design"}
+            number={2}
+            dir={false}
+          />
+
+          <OrderItem
+            title={"توسعه ، پیاده سازی و تست"}
+            text={
+              "در اولین قدم، جلسه‌ای برای آشنایی با شما و درک دقیق نیازها و اهداف پروژه برگزار می‌کنیم. در این مرحله، ما به نیازهای شما گوش می‌دهیم و سوالات لازم را مطرح می‌کنیم تا به تمام جزئیات پروژه آگاه شویم."
+            }
+            img={"develop"}
+            number={3}
+            dir={true}
+          />
+          <OrderItem
+            title={"پشتیبانی و آموزش"}
+            text={
+              "مهم ترین مرحله هر نرم افزار یا محصول تولید شده به قسمت نگهداری maintain اون برمیگرده که در مجموعه برنامه نویسی zeroteam سعی شده بیشترین سرمایه در این قسمت صرف شود .."
+            }
+            img={"support"}
+            number={4}
+            dir={false}
+          />
+        </div>
+        {/* TODO 1-move sample data here 2-edit Paths 3- responsive design*/}
         {/* <Paths extra="path-items hidden lg:block" /> */}
         {/* Mobile */}
         {/* <Paths extra="path-items flex flex-col gap-0 lg:hidden" /> */}

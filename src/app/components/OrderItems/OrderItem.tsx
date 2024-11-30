@@ -86,7 +86,7 @@ export default function OrderItem({
         ></div>
       </div>
       {/* mobile */}
-      {/* <div
+      <div
         id="order-item-container"
         className={`lg:hidden w-[95%] relative flex-col justify-center items-center  mx-auto ${
           dir ? "" : "flex-row-reverse"
@@ -133,8 +133,8 @@ export default function OrderItem({
             dir ? "left-[22px]" : "right-[22px]"
           } top-0 bg-z-yellow z-1`}
         ></div>
-      </div> */}
+      </div>
     </>
   );
 }
-export { type imgTypes, type ButtonVariantProps };
+export { type ButtonVariantProps };
