@@ -1,24 +1,23 @@
 import LandingTitle from "@shared/LandingTitle";
 import Button from "./components/shared/Button";
-import coverImg from "../assets/coiver.jpg";
+import coverImg from "../assets/cover.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "./components/OrderItems/OrderItem";
 import ProjectSlider from "./components/Project Slider/ProjectSlider";
 // import Paths from "./components/OrderItems/Paths";
 export default function Main() {
-  // console.log(coverImg)
   return (
-    <main className="flex flex-col gap-16 lg:gap-20">
+    <main className="flex flex-col gap-16 lg:gap-20 container mx-auto">
       <section
         id="hero-section"
-        className="flex flex-col-reverse gl:pt-4 items-center justify-center gap-10 lg:flex-row lg:gap-20"
+        className="flex flex-col-reverse gl:pt-4 items-center justify-between lg:flex-row gap-5 lg:gap-20 mobile-container"
       >
-        <div className="flex flex-col gap-5 lg:gap-10">
-          <h1 className="font-heavy text-6xl leading-relaxed text-nowrap hidden lg:block">
+        <div className="flex flex-col gap-5 lg:gap-10 md:flex-row md:items-center lg:flex-col ">
+          <h1 className="font-heavy 2xl:text-6xl lg:text-5xl 2xl:leading-[1.5] lg:leading-[1.5] text-nowrap hidden lg:block">
             همه چیز از یک <span className="text-z-yellow">صفر</span> <br />
             شروع شـــــــــــــد
           </h1>
-          <h1 className="font-mostbold lg:hidden text-2xl">
+          <h1 className="font-mostbold lg:hidden text-2xl ">
             {" "}
             همه چیز از یک <span className="text-z-yellow">صفر</span> شروع شد
           </h1>
@@ -47,9 +46,9 @@ export default function Main() {
           </video>
         </div>
       </section>
-      <section id="why-zero" className="flex flex-col gap-20 sm:hidden">
+      <section id="why-zero" className=" flex flex-col gap-10 lg:gap-20 mobile-container">
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
-        <div className="boxes grid grid-cols-2 m-auto w-auto gap-14">
+        <div className="boxes lg:grid lg:grid-cols-2 m-auto w-auto lg:gap-14 flex flex-col gap-5">
           <BoxItem
             intent={"yellow"}
             title="تجربـــــــــــــــــــــــــــــــه"
@@ -86,8 +85,10 @@ export default function Main() {
       >
         <LandingTitle text="پروژه های ما" intent="yellow" />
         <ProjectSlider />
+        {/* <div className="h-10 w-24 bg-gray-400 p-px">sdf</div> */}
+
       </section>
-      <section className="flex flex-col gap-10" id="cooperation-path">
+      <section className="flex flex-col gap-10 mobile-container" id="cooperation-path ">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
         <div className="flex-col gap-0">

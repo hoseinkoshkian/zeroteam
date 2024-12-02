@@ -12,10 +12,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  // maximumScale: 1,
-  // userScalable: false,
-  // Also supported by less commonly used
-  // interactiveWidget: 'resizes-visual',
 };
 export default function RootLayout({
   children,
@@ -25,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <StyledComponentsRegistry>
-        <body className="w-[90%] mx-auto text-z-content">
+        <body className="text-z-content overflow-x-hidden min-h-screen">
           <Header />
           {children}
-          <Footer></Footer>
+          <Footer />
         </body>
       </StyledComponentsRegistry>
     </html>

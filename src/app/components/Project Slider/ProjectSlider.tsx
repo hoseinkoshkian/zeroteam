@@ -92,7 +92,7 @@ export default function ProjectSlider() {
     <>
       <div
         id="slider-container"
-        className="pb-4 flex-shrink-0 grow-0 overflow-y-hidden scrollbar scrollbar-thumb-z-blue scrollbar-track-current lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex space-x-4 flex-nowrap overflow-x-auto relative items-center"
+        className="pb-7 gap-5 flex-shrink-0 grow-0 overflow-y-hidden scrollbar scrollbar-thumb-z-content scrollbar-track-current lg:h-auto lg:w-max lg:mx-auto lg:flex-shrink-0 lg:p-0 lg:gap-24 lg:overflow-hidden lg:items-center lg:flex snap-x snap-mandatory scroll-smooth flex flex-nowrap overflow-x-auto relative items-center mobile-container"
         onTouchStart={handleAnimation}
       >
         {/* Desktop */}
@@ -124,16 +124,19 @@ export default function ProjectSlider() {
           <span>اسکرول کنید</span>
         </motion.div>
 
-        <div id="slides" className="hidden lg:flex lg:items-center lg:relative">
+        <div
+          id="slides"
+          className="hidden lg:flex lg:items-center lg:relative "
+        >
           <Link
             href={"/"}
             className="project-items absolute z-1 flex flex-col items-center font-bold gap-3 opacity-40 -right-20"
           >
             <Image
-              className="border-[8px] border-z-blue rounded-2xl"
+              className="border-4 border-z-yellow rounded-2xl"
               src={ProjectsData[after].src}
-              width={250}
-              height={250}
+              width={550}
+              height={309}
               alt="portfolio"
             ></Image>
             <div>{ProjectsData[after].title}</div>
@@ -142,13 +145,15 @@ export default function ProjectSlider() {
             href={"/"}
             className="project-items flex flex-col items-center font-bold gap-3 z-10"
           >
-            <Image
-              className="border-[8px] border-z-blue rounded-2xl"
-              src={ProjectsData[index].src}
-              width={450}
-              height={450}
-              alt="portfolio"
-            ></Image>
+            <div className="rounded-2xl bg-gradient-to-b from-z-blue to-z-yellow">
+              <Image
+                className="bg-gradient-to-r rounded-[calc(1rem-1px)] p-1 bg-white"
+                src={ProjectsData[after].src}
+                width={700}
+                height={394}
+                alt="portfolio"
+              ></Image>
+            </div>
             <div>{ProjectsData[index].title}</div>
           </Link>
           <Link
@@ -156,10 +161,10 @@ export default function ProjectSlider() {
             className="project-items flex flex-col items-center font-bold gap-3 absolute z-1 -left-20 opacity-50"
           >
             <Image
-              className="border-[8px] border-z-blue rounded-2xl"
+              className="border-4 border-z-blue rounded-2xl"
               src={ProjectsData[before].src}
-              width={250}
-              height={250}
+              width={550}
+              height={309}
               alt="portfolio"
             ></Image>
             <div>{ProjectsData[before].title}</div>
@@ -178,13 +183,15 @@ export default function ProjectSlider() {
             key={i}
             className="project-items lg:hidden flex flex-col items-center font-bold gap-3"
           >
-            <Image
-              className="border-[8px] border-z-blue rounded-2xl"
-              src={s.src}
-              width={1920}
-              height={1080}
-              alt="portfolio"
-            ></Image>
+            <div className="rounded-2xl bg-gradient-to-b from-z-blue to-z-yellow">
+              <Image
+                className="bg-gradient-to-r rounded-[calc(1rem-1px)] p-1 bg-white"
+                src={ProjectsData[after].src}
+                width={700}
+                height={394}
+                alt="portfolio"
+              ></Image>
+            </div>
             <div>{s.title}</div>
           </div>
         ))}

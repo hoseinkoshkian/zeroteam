@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+// import type theme
 const config: Config = {
   corePlugins: {
     preflight: true,
@@ -11,7 +11,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      sm: "340px",
+      sm: "640px",
       // => @media (min-width: 640px) { ... }
 
       md: "768px",
@@ -25,6 +25,16 @@ const config: Config = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+    },
+    container: {
+      padding: {
+        // DEFAULT: "2rem",
+        sm: "2rem",
+        md: "2rem",
+        lg: "2rem",
+        xl: "2rem",
+        "2xl": "2rem",
+      },
     },
     fontWeight: {
       thin: "100",
@@ -42,10 +52,10 @@ const config: Config = {
         "z-blue": "#2A4EEB",
         "z-yellow": "#EB8A2A",
         "z-content": "#3D3D3D",
-        "z-border" : "#EEEEEE"
+        "z-border": "#EEEEEE",
       },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [require("tailwind-scrollbar")],
 };
 export default config;

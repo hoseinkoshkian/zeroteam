@@ -18,9 +18,9 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
     <div
       className={`${
         isOpen ? "" : "hidden"
-      } z-[1000] bg-[#ffffffcf] fixed lg:hidden w-full h-screen py-5`}
+      } z-[1000] bg-[#ffffffcf] fixed lg:hidden w-full h-screen pt-5 pb-5 pr-5`}
     >
-      <div className="bg-white border border-z-border opacity-100 rounded-xl w-[80%] h-full flex flex-col gap-5 p-4">
+      <div className="bg-white border border-z-border opacity-100 rounded-xl w-[80%] h-full flex flex-col gap-5 p-4 shadow-2xl">
         <div className="side-header flex justify-between">
           <Image
             alt="zeroteam-logo"
@@ -121,17 +121,21 @@ export default function Header() {
     <>
       <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
       {/* desktop */}
-      <header className="py-10 hidden lg:block">
-        <div className="flex gap-5 items-center text-sm justify-between">
-          <Image
-            alt="zeroteam-logo"
-            src={"/logo.svg"}
-            height={100}
-            width={100}
-          ></Image>
+      <header className="py-8 hidden lg:block border-b border-b-z-border mb-10">
+        <div className="lg:flex lg:items-center lg:text-sm lg:container lg:mx-auto lg:justify-between ">
+          <div className="logo">
+            <Image
+              alt="zeroteam-logo"
+              src={"/logo.svg"}
+              height={100}
+              width={100}
+            ></Image>
+          </div>
           {/* desktop */}
-          <nav className="nav-items flex gap-20 justify-center font-bold">
-            <Link href="/dashboard">دوره های آموزشی</Link>
+          <nav className="nav-items lg:gap-5 xl:gap-10 2xl:gap-20 lg:justify-between flex font-bold">
+            <Link href="/dashboard" className="links text-nowrap">
+              دوره های آموزشی
+            </Link>
             <Link href="/dashboard">مسیرهای یادگیری</Link>
             <Link href="/dashboard">زیروبلاگ</Link>
             <Link href="/dashboard">پروژه ها‌ | showcase</Link>
@@ -139,28 +143,32 @@ export default function Header() {
             <Link href="/dashboard">تماس با ما</Link>
           </nav>
           {/* mobile */}
-          <div className="flex gap-5">
+          <div className="flex lg:gap-2 xl:gap-5">
             <Button intent="blue" text="فرصت همکاری" />
             <Button intent="yellow" text="ورود | ثبت نام" />
           </div>
         </div>
       </header>
       {/* mobile */}
-      <header className=" lg:hidden py-8 grid grid-cols-3 items-center">
-        <Icon
-          icon="heroicons:bars-3-bottom-right-solid"
-          width={45}
-          height={45}
-          className="col-span-1 bg-[#EBEBEB] p-2 rounded-lg text-z-content"
-          onClick={handleClick}
-        />
-        <Image
-          alt="zeroteam-logo"
-          src={"/logo.svg"}
-          height={50}
-          width={120}
-          className="col-span-2"
-        ></Image>
+      <header>
+        <div className="lg:hidden py-8 grid grid-cols-3 items-center container mx-auto mobile-container">
+          <Icon
+            icon="heroicons:bars-3-bottom-right-solid"
+            width={45}
+            height={45}
+            className="col-span-1 bg-[#EBEBEB] p-2 rounded-lg text-z-content"
+            onClick={handleClick}
+          />
+          <div className="flex justify-center">
+            <Image
+              alt="zeroteam-logo"
+              src={"/logo.svg"}
+              height={50}
+              width={120}
+              className="col-span-2"
+            ></Image>
+          </div>
+        </div>
       </header>
     </>
   );

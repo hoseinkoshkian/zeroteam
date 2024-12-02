@@ -43,7 +43,7 @@ export default function BoxItem({
     case "tool":
       iconEl = (
         <Image
-          alt="lamp-icon"
+          alt="tool-icon"
           src={tool}
           height="100"
           width="100"
@@ -59,7 +59,7 @@ export default function BoxItem({
           src={lamp}
           height="100"
           width="100"
-          className="absolute left-[5%] top-[60%] z-0"
+          className="absolute left-[5%] top-[50%] z-0"
         ></Image>
       );
       break;
@@ -67,7 +67,7 @@ export default function BoxItem({
     case "customer":
       iconEl = (
         <Image
-          alt="lamp-icon"
+          alt="customer-icon"
           src={customer}
           height="100"
           width="100"
@@ -79,7 +79,7 @@ export default function BoxItem({
     case "time":
       iconEl = (
         <Image
-          alt="lamp-icon"
+          alt="time-icon"
           src={time}
           height="100"
           width="100"
