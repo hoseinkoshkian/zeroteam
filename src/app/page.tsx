@@ -7,7 +7,7 @@ import ProjectSlider from "./components/Project Slider/ProjectSlider";
 // import Paths from "./components/OrderItems/Paths";
 export default function Main() {
   return (
-    <main className="flex flex-col gap-16 lg:gap-20 container mx-auto">
+    <div className="flex flex-col gap-16 lg:gap-20 container mx-auto">
       <section
         id="hero-section"
         className="flex flex-col-reverse gl:pt-4 items-center justify-between lg:flex-row gap-5 lg:gap-20 mobile-container"
@@ -135,6 +135,6 @@ export default function Main() {
         {/* Mobile */}
         {/* <Paths extra="path-items flex flex-col gap-0 lg:hidden" /> */}
       </section>
-    </main>
+    </div>
   );
 }

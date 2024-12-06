@@ -53,7 +53,7 @@ export default function Footer() {
           id="footer-copy-right"
           className="flex flex-col gap-6 lg:w-max lg:mx-auto"
         >
-          <p className="font-semibold text-sm text-center">
+          <p className="font-semibold text-[12px] text-center">
             کلیه حقوق مادی و معنوی این وب‌سایت متعلق به زیروتیم می باشد
           </p>
           <div

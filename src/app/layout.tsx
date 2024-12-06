@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <StyledComponentsRegistry>
-        <body className="text-z-content overflow-x-hidden min-h-screen">
+        <body className="text-z-content overflow-x-hidden flex flex-col justify-between h-screen">
           <Header />
-          {children}
+          <main className="basis-full container mx-auto mobile-container">{children}</main>
           <Footer />
         </body>
       </StyledComponentsRegistry>
