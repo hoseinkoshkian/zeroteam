@@ -46,7 +46,10 @@ export default function Main() {
           </video>
         </div>
       </section>
-      <section id="why-zero" className=" flex flex-col gap-10 lg:gap-20 mobile-container">
+      <section
+        id="why-zero"
+        className=" flex flex-col gap-10 lg:gap-20 mobile-container"
+      >
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes lg:grid lg:grid-cols-2 m-auto w-auto lg:gap-14 flex flex-col gap-5">
           <BoxItem
@@ -86,9 +89,11 @@ export default function Main() {
         <LandingTitle text="پروژه های ما" intent="yellow" />
         <ProjectSlider />
         {/* <div className="h-10 w-24 bg-gray-400 p-px">sdf</div> */}
-
       </section>
-      <section className="flex flex-col gap-10 mobile-container" id="cooperation-path ">
+      <section
+        className="flex flex-col gap-10 mobile-container"
+        id="cooperation-path "
+      >
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
         <div className="flex-col gap-0">

@@ -70,7 +70,7 @@ export default function OrderItem({
             <hr className="h-[4px] w-full bg-z-blue border-none outline-none" />
           </div>
 
-          <div className={`leading-loose text-justify w-full p-8`}>{text}</div>
+          <div className={`leading-loose text-justify w-full p-8 hyphens-none`}>{text}</div>
         </div>
         <div className="w-1/2 px-4 py-2 ">
           <Image

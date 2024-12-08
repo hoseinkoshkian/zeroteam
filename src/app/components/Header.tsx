@@ -127,8 +127,8 @@ export default function Header() {
             <Image
               alt="zeroteam-logo"
               src={"/logo.svg"}
-              height={100}
               width={100}
+              height={30}
             ></Image>
           </div>
           {/* desktop */}

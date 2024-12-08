@@ -23,7 +23,7 @@ export default function RootLayout({
       <StyledComponentsRegistry>
         <body className="text-z-content overflow-x-hidden flex flex-col justify-between h-screen">
           <Header />
-          <main className="basis-full container mx-auto mobile-container">{children}</main>
+          <main className="basis-full container mx-auto">{children}</main>
           <Footer />
         </body>
       </StyledComponentsRegistry>
