@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 // import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="pt-10 lg:pt-20 border-t-2 border-gray-50 mt-10 mobile-container">
+    <footer className="pt-10 lg:pt-20 border-t-2 border-gray-50 mt-10">
       <div className=" flex flex-col gap-10 container mx-auto">
         <div
           id="footer-info"

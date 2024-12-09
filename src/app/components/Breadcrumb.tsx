@@ -13,7 +13,7 @@ export default function Breadcrumb() {
   return (
     <nav
       aria-label="breadcrumb"
-      className=" overflow-x-auto whitespace-nowrap text-nowrap py-3 text-sm px-3 flex gap-2 items-center border-y-2 border-z-border"
+      className="container overflow-x-auto whitespace-nowrap text-nowrap py-3 text-sm flex gap-2 items-center border-y border-z-border lg:border-none"
     >
       {/* {paths.map((p) => p)} */}
       <Link href={"/"} className="text-zinc-500">

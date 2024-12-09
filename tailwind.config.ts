@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-// import type theme
+// import { mobilePadding } from "styles.config";
+const mobilePadding = "1rem";
 const config: Config = {
   corePlugins: {
     preflight: true,
@@ -10,26 +11,33 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      colors: {
+        "z-blue": "#2A4EEB",
+        "z-yellow": "#EB8A2A",
+        "z-content": "#3D3D3D",
+        "z-border": "#EEEEEE",
+      },
+      spacing: {
+        sm: mobilePadding,
+      },
+    },
     screens: {
-      sm: "640px",
-      // => @media (min-width: 640px) { ... }
+      // max-width
+
+      sm: "620px",
 
       md: "768px",
-      // => @media (min-width: 768px) { ... }
 
       lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
 
       xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
 
       "2xl": "1536px",
-      // => @media (min-width: 1536px) { ... }
     },
     container: {
       padding: {
-        // DEFAULT: "2rem",
-        sm: "2rem",
+        DEFAULT: mobilePadding, // also for "sm" size
         md: "2rem",
         lg: "2rem",
         xl: "2rem",
@@ -46,14 +54,6 @@ const config: Config = {
       extrabold: "900",
       mostbold: "950",
       heavy: "1000",
-    },
-    extend: {
-      colors: {
-        "z-blue": "#2A4EEB",
-        "z-yellow": "#EB8A2A",
-        "z-content": "#3D3D3D",
-        "z-border": "#EEEEEE",
-      },
     },
   },
   plugins: [require("tailwind-scrollbar")],

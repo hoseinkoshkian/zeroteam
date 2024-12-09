@@ -18,7 +18,7 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
     <div
       className={`${
         isOpen ? "" : "hidden"
-      } z-[1000] bg-[#ffffffcf] fixed lg:hidden w-full h-screen pt-5 pb-5 pr-5`}
+      } z-[1000] bg-[#ffffffcf] fixed lg:hidden w-full h-screen pt-4 pb-4 pr-4`}
     >
       <div className="bg-white border border-z-border opacity-100 rounded-xl w-[80%] h-full flex flex-col gap-5 p-4 shadow-2xl">
         <div className="side-header flex justify-between">

@@ -7,10 +7,10 @@ import ProjectSlider from "./components/Project Slider/ProjectSlider";
 // import Paths from "./components/OrderItems/Paths";
 export default function Main() {
   return (
-    <div className="flex flex-col gap-16 lg:gap-20 container mx-auto">
+    <div className="flex flex-col gap-16 lg:gap-20">
       <section
         id="hero-section"
-        className="flex flex-col-reverse gl:pt-4 items-center justify-between lg:flex-row gap-5 lg:gap-20 mobile-container"
+        className="flex flex-col-reverse gl:pt-4 items-center justify-between lg:flex-row gap-5 lg:gap-20  container mx-auto"
       >
         <div className="flex flex-col gap-5 lg:gap-10 md:flex-row md:items-center lg:flex-col ">
           <h1 className="font-heavy 2xl:text-6xl lg:text-5xl 2xl:leading-[1.5] lg:leading-[1.5] text-nowrap hidden lg:block">
@@ -46,10 +46,7 @@ export default function Main() {
           </video>
         </div>
       </section>
-      <section
-        id="why-zero"
-        className=" flex flex-col gap-10 lg:gap-20 mobile-container"
-      >
+      <section id="why-zero" className=" flex flex-col gap-10 lg:gap-20  container mx-auto">
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes lg:grid lg:grid-cols-2 m-auto w-auto lg:gap-14 flex flex-col gap-5">
           <BoxItem
@@ -90,10 +87,7 @@ export default function Main() {
         <ProjectSlider />
         {/* <div className="h-10 w-24 bg-gray-400 p-px">sdf</div> */}
       </section>
-      <section
-        className="flex flex-col gap-10 mobile-container"
-        id="cooperation-path "
-      >
+      <section className="flex flex-col gap-10" id="cooperation-path  container mx-auto">
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
         <div className="flex-col gap-0">

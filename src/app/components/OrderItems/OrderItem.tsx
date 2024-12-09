@@ -42,7 +42,7 @@ export default function OrderItem({
       {/* desktop */}
       <div
         id="order-item-container"
-        className={`hidden relative lg:w-[80%] lg:flex justify-center items-center  mx-auto ${
+        className={`hidden lg:h-[200px] relative lg:w-[80%] lg:flex justify-center lg:items-stretch  mx-auto ${
           dir ? "" : "flex-row-reverse"
         }`}
         {...props}
