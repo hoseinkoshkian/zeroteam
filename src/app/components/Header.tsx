@@ -133,14 +133,27 @@ export default function Header() {
           </div>
           {/* desktop */}
           <nav className="nav-items lg:gap-5 xl:gap-10 2xl:gap-20 lg:justify-between flex font-bold">
-            <Link href="/dashboard" className="links text-nowrap">
+            <Link
+              href="/dashboard"
+              className="links text-nowrap hover:link-nav"
+            >
               دوره های آموزشی
             </Link>
-            <Link href="/dashboard">مسیرهای یادگیری</Link>
-            <Link href="/dashboard">زیروبلاگ</Link>
-            <Link href="/dashboard">پروژه ها‌ | showcase</Link>
-            <Link href="/dashboard">درباره ما</Link>
-            <Link href="/dashboard">تماس با ما</Link>
+            <Link href="/dashboard" className="hover:link-nav">
+              مسیرهای یادگیری
+            </Link>
+            <Link href="/dashboard" className="hover:link-nav">
+              زیروبلاگ
+            </Link>
+            <Link href="/dashboard" className="flex hover:link-nav">
+              پروژه ها‌ - showcase
+            </Link>
+            <Link href="/dashboard" className="flex hover:link-nav">
+              درباره ما
+            </Link>
+            <Link href="/dashboard" className="flex hover:link-nav">
+              تماس با ما
+            </Link>
           </nav>
           {/* mobile */}
           <div className="flex lg:gap-2 xl:gap-5">

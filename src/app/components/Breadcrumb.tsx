@@ -13,18 +13,18 @@ export default function Breadcrumb() {
   return (
     <nav
       aria-label="breadcrumb"
-      className="container overflow-x-auto whitespace-nowrap text-nowrap py-3 text-sm flex gap-2 items-center border-y border-z-border lg:border-none"
+      className="container mx-auto overflow-x-auto whitespace-nowrap text-nowrap py-3 text-sm flex gap-2 items-center border-y border-z-border sm:border-none mb-5"
     >
       {/* {paths.map((p) => p)} */}
-      <Link href={"/"} className="text-zinc-500">
+      <Link href={"/"} className="text-zinc-500 hover:underline hover:underline-offset-2 hover:decoration-z-blue hover:decoration-2">
         خانه
       </Link>
       <div className="next">
         <Icon
-          icon="ph:caret-circle-left-duotone"
+          icon="ph:caret-left-bold"
           width={20}
           height={20}
-          className="text-zinc-300 flex-grow"
+          className="text-z-blue flex-grow"
         />
       </div>
       <Link href={"/"} className="text-zinc-500">
@@ -32,10 +32,10 @@ export default function Breadcrumb() {
       </Link>
       <div className="next">
         <Icon
-          icon="ph:caret-circle-left-duotone"
+          icon="ph:caret-left-bold"
           width={20}
           height={20}
-          className="text-zinc-300 flex-grow"
+          className="text-z-blue flex-grow font-extrabold"
         />
       </div>
       <Link href={"/"} className="text-zinc-500">
@@ -43,13 +43,35 @@ export default function Breadcrumb() {
       </Link>
       <div className="next">
         <Icon
-          icon="ph:caret-circle-left-duotone"
+          icon="ph:caret-left-bold"
           width={20}
           height={20}
-          className="text-zinc-300 flex-grow"
+          className="text-z-blue flex-grow"
         />
       </div>
       <Link href={"/"} className="text-zinc-500">
+        سینمبتسمنیبت
+      </Link>
+      <div className="next">
+        <Icon
+          icon="ph:caret-left-bold"
+          width={20}
+          height={20}
+          className="text-z-blue flex-grow"
+        />
+      </div>
+      <Link href={"/"} className="text-zinc-500">
+        لوکسید
+      </Link>
+      <div className="next">
+        <Icon
+          icon="ph:caret-left-bold"
+          width={20}
+          height={20}
+          className="text-z-blue flex-grow"
+        />
+      </div>
+      <Link href={"/"} className="text-z-content hover:link-sm font-semibold">
         سینمبتسمنیبت
       </Link>
     </nav>

@@ -12,6 +12,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // content: {
+      //   link: 'url("/icons/link.svg")',
+      // },
       colors: {
         "z-blue": "#2A4EEB",
         "z-yellow": "#EB8A2A",

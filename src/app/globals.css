@@ -109,6 +109,16 @@
     @apply px-4;
   }
 
+  .link-sm {
+    @apply underline underline-offset-2 decoration-z-blue decoration-2;
+  }
+  .link-nav {
+    @apply font-semibold underline underline-offset-8 decoration-z-content decoration-2;
+  }
+  .link-content {
+    @apply text-z-blue font-semibold underline underline-offset-2 decoration-2 decoration-[#C0CCFF];
+  }
+
   /* .ss04 {
     -moz-font-feature-settings: "ss04";
     -webkit-font-feature-settings: "ss04";
