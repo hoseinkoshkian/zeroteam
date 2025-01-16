@@ -1,10 +1,10 @@
 "use client";
 import LandingTitle from "@shared/LandingTitle";
-import Button from "./components/shared/Button";
+import Button from "@shared/Button";
 import coverImg from "../assets/cover.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
-import OrderItem from "./components/OrderItems/OrderItem";
-import ProjectSlider from "./components/Project Slider/ProjectSlider";
+import OrderItem from "@components/OrderItems/OrderItem";
+import ProjectSlider from "@components/Project Slider/ProjectSlider";
 
 // import Paths from "./components/OrderItems/Paths";
 

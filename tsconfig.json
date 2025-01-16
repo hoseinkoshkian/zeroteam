@@ -20,11 +20,12 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/app/*"],
-      "@shared/*": ["./src/app/components/shared/*"],
+      "@routes/*": ["./src/app/*"],
+      "@shared/*": ["./src/components/shared/*"],
       "@assets/*": ["./src/assets/*"],
-      "@components/*": ["./src/app/components/*"]
-    }
+      "@components/*": ["./src/components/*"] , 
+      "@fonts/*": ["./src/fonts/*"]
+    }  
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
