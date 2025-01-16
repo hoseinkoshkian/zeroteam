@@ -1,5 +1,6 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer" ;
 import Link from "next/link";
 import Button from "@shared/Button";
 import { Icon } from "@iconify/react";
@@ -22,13 +23,13 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
     >
       <div className="bg-white border border-z-border opacity-100 rounded-xl w-[80%] h-full flex flex-col gap-5 p-4 shadow-2xl">
         <div className="side-header flex justify-between">
-          <Image
+          <ExportedImage
             alt="zeroteam-logo"
             src={"/logo.svg"}
             height={40}
             width={100}
             className="col-span-2"
-          ></Image>
+          ></ExportedImage>
           <Icon
             icon="heroicons:x-mark"
             width={45}
@@ -124,12 +125,12 @@ export default function Header() {
       <header className="py-8 hidden lg:block border-b border-b-z-border mb-10">
         <div className="lg:flex lg:items-center lg:text-sm lg:container lg:mx-auto lg:justify-between ">
           <div className="logo">
-            <Image
+            <ExportedImage
               alt="zeroteam-logo"
               src={"/logo.svg"}
               width={100}
               height={30}
-            ></Image>
+            ></ExportedImage>
           </div>
           {/* desktop */}
           <nav className="nav-items lg:gap-5 xl:gap-10 2xl:gap-20 lg:justify-between flex font-bold">
@@ -137,16 +138,13 @@ export default function Header() {
               href="/dashboard"
               className="links text-nowrap hover:link-nav"
             >
-              دوره های آموزشی
+              پروژه ها
             </Link>
             <Link href="/dashboard" className="hover:link-nav">
-              مسیرهای یادگیری
+              آکادمی
             </Link>
             <Link href="/dashboard" className="hover:link-nav">
-              زیروبلاگ
-            </Link>
-            <Link href="/dashboard" className="flex hover:link-nav">
-              پروژه ها‌ - showcase
+              مقاله ها
             </Link>
             <Link href="/dashboard" className="flex hover:link-nav">
               درباره ما
@@ -173,13 +171,13 @@ export default function Header() {
             onClick={handleClick}
           />
           <div className="flex justify-center">
-            <Image
+            <ExportedImage
               alt="zeroteam-logo"
               src={"/logo.svg"}
               height={50}
               width={120}
               className="col-span-2"
-            ></Image>
+            ></ExportedImage>
           </div>
         </div>
       </header>

@@ -1,6 +1,7 @@
 import staff from "./staff.svg";
 import staffB from "./staff-b.svg";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { ElProps } from "../../../types/types";
 import { cva, VariantProps } from "class-variance-authority";
 
@@ -29,9 +30,9 @@ export default function LandingTitle({
     landingTitle({
       intent,
     }) == "yellow" ? (
-      <Image src={staff} width={30} height={30} alt="." />
+      <ExportedImage src={staff} width={30} height={30} alt="." />
     ) : (
-      <Image src={staffB} width={30} height={30} alt="." />
+      <ExportedImage src={staffB} width={30} height={30} alt="." />
     );
   return (
     <div

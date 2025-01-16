@@ -3,7 +3,7 @@ import { ElProps } from "src/types/types";
 interface ButtonProps extends VariantProps<typeof buttonStyles>, ElProps {
   text: string;
 }
-const buttonStyles = cva("px-5 py-2 text-white rounded-lg", {
+const buttonStyles = cva("px-5 py-2 text-white rounded-xl", {
   variants: {
     intent: {
       blue: "bg-z-blue",
@@ -17,16 +17,6 @@ const buttonStyles = cva("px-5 py-2 text-white rounded-lg", {
   },
 });
 export default function Button({ intent, text, extra, ...props }: ButtonProps) {
-  // const outline =
-  //   buttonStyles({ intent }) == "outline" ? (
-  //     <button className={`${buttonStyles({ intent })} ${extra}`} {...props}>
-  //       {text}
-  //     </button>
-  //   ) : (
-  //     <button className={`${buttonStyles({ intent })} ${extra}`} {...props}>
-  //       {text}
-  //     </button>
-  //   );
   return (
     <button className={`${buttonStyles({ intent })} ${extra}`} {...props}>
       {text}

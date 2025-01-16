@@ -4,7 +4,8 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import screen1 from "./screen-1.png";
 import screen2 from "./screen-2.png";
 import screen3 from "./screen-3.png";
@@ -109,13 +110,13 @@ export default function ProjectSlider() {
               href={"/"}
               className="project-items absolute z-1 flex flex-col items-center font-bold gap-3 opacity-40 -right-20"
             >
-              <Image
+              <ExportedImage
                 className="border-4 border-z-yellow rounded-2xl"
                 src={ProjectsData[after].src}
                 width={550}
                 height={309}
                 alt="portfolio"
-              ></Image>
+              ></ExportedImage>
               <div>{ProjectsData[after].title}</div>
             </Link>
             <Link
@@ -123,13 +124,13 @@ export default function ProjectSlider() {
               className="project-items flex flex-col items-center font-bold gap-3 z-10"
             >
               <div className="rounded-2xl bg-gradient-to-b from-z-blue to-z-yellow">
-                <Image
+                <ExportedImage
                   className="bg-gradient-to-r rounded-[calc(1rem-1px)] p-1 bg-white"
                   src={ProjectsData[after].src}
                   width={700}
                   height={394}
                   alt="portfolio"
-                ></Image>
+                ></ExportedImage>
               </div>
               <div>{ProjectsData[index].title}</div>
             </Link>
@@ -137,13 +138,13 @@ export default function ProjectSlider() {
               href={"/"}
               className="project-items flex flex-col items-center font-bold gap-3 absolute z-1 -left-20 opacity-50"
             >
-              <Image
+              <ExportedImage
                 className="border-4 border-z-blue rounded-2xl"
                 src={ProjectsData[before].src}
                 width={550}
                 height={309}
                 alt="portfolio"
-              ></Image>
+              ></ExportedImage>
               <div>{ProjectsData[before].title}</div>
             </Link>
           </div>
@@ -190,13 +191,13 @@ export default function ProjectSlider() {
               className="project-items lg:hidden flex flex-col items-center font-bold gap-5"
             >
               <div className="rounded-2xl bg-gradient-to-b from-z-blue to-z-yellow">
-                <Image
+                <ExportedImage
                   className="bg-gradient-to-r rounded-[calc(1rem-1px)] p-1 bg-white"
                   src={ProjectsData[after].src}
                   width={700}
                   height={394}
                   alt="portfolio"
-                ></Image>
+                ></ExportedImage>
               </div>
               <div>{s.title}</div>
             </div>

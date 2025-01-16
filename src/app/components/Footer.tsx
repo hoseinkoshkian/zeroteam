@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Icon } from "@iconify/react";
 // import PN from "persian-number";
 // import Link from "next/link";
@@ -11,12 +12,12 @@ export default function Footer() {
           className="flex flex-col gap-10 lg:flex-row lg:justify-between"
         >
           <div id="footer-des" className="flex flex-col gap-5 lg:w-1/2 ">
-            <Image
+            <ExportedImage
               alt="zeroteam-logo"
               src={"/logo.svg"}
               width={100}
               height={100}
-            ></Image>
+            ></ExportedImage>
             <h6
               id="explanation-zeroteam"
               className="leading-loose text-justify"

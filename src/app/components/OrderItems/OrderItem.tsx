@@ -1,5 +1,5 @@
-import Image from "next/image";
-
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import reqs from "./reqs.svg";
 import design from "./design.png";
 import develop from "./develop.png";
@@ -73,13 +73,13 @@ export default function OrderItem({
           <div className={`leading-loose text-justify w-full p-8 hyphens-none`}>{text}</div>
         </div>
         <div className="w-1/2 px-4 py-2 ">
-          <Image
+          <ExportedImage
             className="mx-auto "
             alt="zeroteam-logo"
             src={OrderItemStyles({ img })}
             height={150}
             width={150}
-          ></Image>
+          ></ExportedImage>
         </div>
         <div
           className={`absolute h-full w-1 left-1/2 top-0 bg-z-yellow z-1`}
@@ -119,13 +119,13 @@ export default function OrderItem({
             }  py-5 flex flex-col gap-4`}
           >
             {text}
-            <Image
+            <ExportedImage
               className="mx-auto "
               alt="zeroteam-logo"
               src={OrderItemStyles({ img })}
               height={150}
               width={150}
-            ></Image>
+            ></ExportedImage>
           </div>
         </div>
         <div

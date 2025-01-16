@@ -118,6 +118,9 @@
   .link-content {
     @apply text-z-blue font-semibold underline underline-offset-2 decoration-2 decoration-[#C0CCFF];
   }
+  .button {
+    @apply animate-bounce
+  }
 
   /* .ss04 {
     -moz-font-feature-settings: "ss04";

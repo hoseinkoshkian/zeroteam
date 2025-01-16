@@ -1,10 +1,19 @@
+"use client";
 import LandingTitle from "@shared/LandingTitle";
 import Button from "./components/shared/Button";
 import coverImg from "../assets/cover.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "./components/OrderItems/OrderItem";
 import ProjectSlider from "./components/Project Slider/ProjectSlider";
+
 // import Paths from "./components/OrderItems/Paths";
+
+// import styled from "styled-components";
+// const Title = styled.h1`
+//   font-size: 1.5em;
+//   text-align: center;
+//   color: #bf4f74;
+// `;
 export default function Main() {
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -46,7 +55,10 @@ export default function Main() {
           </video>
         </div>
       </section>
-      <section id="why-zero" className=" flex flex-col gap-10 lg:gap-20  container mx-auto">
+      <section
+        id="why-zero"
+        className=" flex flex-col gap-10 lg:gap-20  container mx-auto"
+      >
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes lg:grid lg:grid-cols-2 m-auto w-auto lg:gap-14 flex flex-col gap-5">
           <BoxItem
@@ -87,7 +99,10 @@ export default function Main() {
         <ProjectSlider />
         {/* <div className="h-10 w-24 bg-gray-400 p-px">sdf</div> */}
       </section>
-      <section className="flex flex-col gap-10" id="cooperation-path  container mx-auto">
+      <section
+        className="flex flex-col gap-10"
+        id="cooperation-path  container mx-auto"
+      >
         <LandingTitle text="مسیر همکاری" intent="yellow" />
         {/* Desktop */}
         <div className="flex-col gap-0">

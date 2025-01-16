@@ -1,7 +1,8 @@
 import { cva, VariantProps } from "class-variance-authority";
 // import { ReactElement } from "react";
 import { ElProps } from "src/types/types";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import lamp from "./lamp.svg";
 import customer from "./customer.svg";
@@ -42,61 +43,61 @@ export default function BoxItem({
   switch (icon) {
     case "tool":
       iconEl = (
-        <Image
+        <ExportedImage
           alt="tool-icon"
           src={tool}
           height="100"
           width="100"
           className="absolute left-[5%] top-[65%] z-0"
-        ></Image>
+        ></ExportedImage>
       );
       break;
 
     case "lamp":
       iconEl = (
-        <Image
+        <ExportedImage
           alt="lamp-icon"
           src={lamp}
           height="100"
           width="100"
           className="absolute left-[5%] top-[50%] z-0"
-        ></Image>
+        ></ExportedImage>
       );
       break;
 
     case "customer":
       iconEl = (
-        <Image
+        <ExportedImage
           alt="customer-icon"
           src={customer}
           height="100"
           width="100"
           className="absolute left-[5%] top-[65%] z-0"
-        ></Image>
+        ></ExportedImage>
       );
       break;
 
     case "time":
       iconEl = (
-        <Image
+        <ExportedImage
           alt="time-icon"
           src={time}
           height="100"
           width="100"
           className="absolute left-[5%] top-[65%] z-0"
-        ></Image>
+        ></ExportedImage>
       );
       break;
 
     default:
       iconEl = (
-        <Image
+        <ExportedImage
           alt="lamp-icon"
           src={time}
           height="100"
           width="100"
           className="absolute left-[5%] top-[50%] z-0"
-        ></Image>
+        ></ExportedImage>
       );
       break;
   }
