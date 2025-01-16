@@ -6,7 +6,7 @@ import type { Viewport } from "next";
 // import StyledComponentsRegistry from "./lib/registery";
 
 export const metadata: Metadata = {
-  title: "zeroteam",
+  title: "صفحه اصلی | زیروتیم",
   description: "تیم برنامه نویسی",
 };
 
@@ -21,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-        <body className="text-z-content overflow-x-hidden flex flex-col justify-between h-screen">
-          <Header />
-          <main className="basis-full font-normal">{children}</main>
-          <Footer />
-        </body>
+      <body className="text-z-content overflow-x-hidden flex flex-col justify-between h-screen">
+        <Header />
+        <main className="basis-full font-normal">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

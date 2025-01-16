@@ -1,15 +1,9 @@
-"use client";
-import Breadcrumb from "@components/Breadcrumb";
-import { useSearchParams } from "next/navigation";
-// export function generateStaticParams() {
-//   return {
-//     name: "خانه",
-//   };
-// }
-export default function AboutUs(param: string) {
-  // const
-  const searchParams = useSearchParams();
-  console.log(searchParams);
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "درباه ما",
+};
+
+export default function AboutUs() {
   return (
     <>
       <div className="container mx-auto">سیب</div>
