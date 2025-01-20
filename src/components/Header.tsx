@@ -1,6 +1,6 @@
 "use client";
 // import Image from "next/image";
-import ExportedImage from "next-image-export-optimizer" ;
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import Button from "@shared/Button";
 import { Icon } from "@iconify/react";
@@ -124,39 +124,41 @@ export default function Header() {
       {/* desktop */}
       <header className="py-8 hidden lg:block border-b border-b-z-border mb-10">
         <div className="lg:flex lg:items-center lg:text-sm lg:container lg:mx-auto lg:justify-between ">
-          <div className="logo">
+          <Link href={"/"} className="cursor-pointer">
             <ExportedImage
               alt="zeroteam-logo"
               src={"/logo.svg"}
               width={100}
               height={30}
             ></ExportedImage>
-          </div>
+          </Link>
           {/* desktop */}
           <nav className="nav-items lg:gap-5 xl:gap-10 2xl:gap-20 lg:justify-between flex font-bold">
-            <Link
-              href="/dashboard"
-              className="links text-nowrap hover:link-nav"
-            >
+            <Link href="/projects" className="links text-nowrap hover:link-nav">
               پروژه ها
             </Link>
-            <Link href="/dashboard" className="hover:link-nav">
+            <Link href="/academy" className="hover:link-nav">
               آکادمی
             </Link>
-            <Link href="/dashboard" className="hover:link-nav">
+            <Link href="/blog" className="hover:link-nav">
               مقاله ها
             </Link>
-            <Link href="/dashboard" className="flex hover:link-nav">
+            <Link href="/about-us" className="flex hover:link-nav">
               درباره ما
             </Link>
-            <Link href="/dashboard" className="flex hover:link-nav">
+            <Link href="/contact-us" className="flex hover:link-nav">
               تماس با ما
             </Link>
           </nav>
           {/* mobile */}
           <div className="flex lg:gap-2 xl:gap-5">
-            <Button intent="blue" text="فرصت همکاری" />
-            <Button intent="yellow" text="ورود | ثبت نام" />
+            <Link href="/job-opportunities" className="btn-z-yellow">
+              فرصت همکاری
+            </Link>
+            <Link href="/auth" className="btn-z-blue flex gap-2">
+              <Icon icon="ph:sign-in-duotone" width={24} height={24} />
+              ورود | ثبت نام
+            </Link>
           </div>
         </div>
       </header>
@@ -170,7 +172,7 @@ export default function Header() {
             className="col-span-1 bg-[#EBEBEB] p-2 rounded-lg text-z-content"
             onClick={handleClick}
           />
-          <div className="flex justify-center">
+          <Link href={"/"} className="flex justify-center">
             <ExportedImage
               alt="zeroteam-logo"
               src={"/logo.svg"}
@@ -178,7 +180,7 @@ export default function Header() {
               width={120}
               className="col-span-2"
             ></ExportedImage>
-          </div>
+          </Link>
         </div>
       </header>
     </>

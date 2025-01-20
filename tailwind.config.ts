@@ -1,10 +1,8 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 // import { mobilePadding } from "styles.config";
 const mobilePadding = "1rem";
 const config: Config = {
-  corePlugins: {
-    preflight: true,
-  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,11 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // content: {
-      //   link: 'url("/icons/link.svg")',
-      // },
       colors: {
         "z-blue": "#2A4EEB",
+        "z-deep-blue": "#0F2A9F",
+        "z-deep-yellow": "#BA6612",
         "z-yellow": "#EB8A2A",
         "z-content": "#3D3D3D",
         "z-border": "#EEEEEE",
@@ -26,8 +23,6 @@ const config: Config = {
       },
     },
     screens: {
-      // max-width
-
       sm: "620px",
 
       md: "768px",
@@ -59,6 +54,28 @@ const config: Config = {
       heavy: "1000",
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [
+    require("tailwind-scrollbar"),
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        ".btn-z-blue": {
+          "@apply px-5 py-2 text-white rounded-xl bg-z-blue font-bold hover:bg-z-deep-blue":
+            {},
+        },
+        ".btn-z-yellow": {
+          "@apply px-5 py-2 text-white rounded-xl bg-z-yellow font-bold hover:bg-z-deep-yellow":
+            {},
+        },
+        ".btn-z-outline-blue": {
+          "@apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-blue text-z-blue font-bold":
+            {},
+        },
+        ".btn-z-outline-yellow": {
+          "@apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-yellow text-z-yellow font-bold":
+            {},
+        },
+      });
+    }),
+  ],
 };
 export default config;

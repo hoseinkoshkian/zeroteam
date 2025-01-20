@@ -31,8 +31,8 @@ export default function Main() {
             همه چیز از یک <span className="text-z-yellow">صفر</span> شروع شد
           </h1>
           <div className="call-to-actions flex gap-5 justify-center">
-            <Button text="مسیر یادگیری" intent="blue" />
-            <Button text="مشاوره رایگان" intent="outlineY" />
+            <Button text="مسیر یادگیری" style="btn-z-outline-blue" />
+            <Button text="مشاوره رایگان" style="btn-z-outline-yellow" />
           </div>
         </div>
 
