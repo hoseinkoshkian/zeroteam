@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import ExportedImage from "next-image-export-optimizer";
 import banner from "@assets/about-us-banner.png";
 import InfoBox from "@components/InfoBox/InfoBox";
+import Breadcrumb from "@components/Breadcrumb";
+
 export const metadata: Metadata = {
   title: "تماس با ما",
 };
@@ -9,6 +11,7 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <>
+      <Breadcrumb />
       <div className="container mx-auto flex flex-col gap-12" id="body">
         <div className="hero flex flex-col justify-between items-center gap-10 lg:flex-row">
           <p className="leading-loose text-justify">
