@@ -13,9 +13,10 @@ const config: Config = {
       colors: {
         "z-blue": "#2A4EEB",
         "z-deep-blue": "#0F2A9F",
-        "z-deep-yellow": "#BA6612",
         "z-yellow": "#EB8A2A",
+        "z-deep-yellow": "#BA6612",
         "z-content": "#3D3D3D",
+        "z-poor-content": "#AFAFAF",
         "z-border": "#EEEEEE",
       },
       spacing: {
@@ -72,6 +73,18 @@ const config: Config = {
         },
         ".btn-z-outline-yellow": {
           "@apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-yellow text-z-yellow font-bold":
+            {},
+        },
+        ".link-content": {
+          "@apply text-z-blue font-semibold underline underline-offset-2 decoration-2 decoration-[#C0CCFF]":
+            {},
+        },
+        ".link-nav": {
+          "@apply font-semibold underline underline-offset-8 decoration-z-content decoration-2":
+            {},
+        },
+        ".link-sm": {
+          "@apply underline underline-offset-2 decoration-z-blue decoration-2":
             {},
         },
       });

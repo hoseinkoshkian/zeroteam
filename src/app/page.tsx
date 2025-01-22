@@ -2,7 +2,7 @@
 import LandingTitle from "@shared/LandingTitle";
 import Button from "@shared/Button";
 import coverImg from "../assets/cover.jpg";
-// import BoxItem from "@components/BoxItem/BoxItem";
+import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "@components/OrderItems/OrderItem";
 import ProjectSlider from "@components/Project Slider/ProjectSlider";
 import zeroLoadingGif from "@assets/zerolaoding.gif";
@@ -17,7 +17,7 @@ import zeroLoadingGif from "@assets/zerolaoding.gif";
 export default function Main() {
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
-      <img src={zeroLoadingGif.src} alt="laoding" width={200}/>
+      {/* <img src={zeroLoadingGif.src} alt="laoding" width={200}/> */}
       <section
         id="hero-section"
         className="flex flex-col-reverse gl:pt-4 items-center justify-between lg:flex-row gap-5 lg:gap-20  container mx-auto"
@@ -62,7 +62,7 @@ export default function Main() {
       >
         <LandingTitle text="چرا ما ؟ چرا زیروتیم ؟" intent="yellow" />
         <div className="boxes lg:grid lg:grid-cols-2 m-auto w-auto lg:gap-14 flex flex-col gap-5">
-          {/* <BoxItem
+          <BoxItem
             intent={"yellow"}
             title="تجربـــــــــــــــــــــــــــــــه"
             text="سال‌ها تجربه در زمینه توسعه نرم‌افزار و کار با صنایع مختلف."
@@ -89,7 +89,7 @@ export default function Main() {
             text="ارتباط نزدیک با مشتریان و توجه به نیازهای آن‌ها در تمام مراحل پروژه."
             size={400}
             icon="customer"
-          /> */}
+          />
         </div>
       </section>
       <section

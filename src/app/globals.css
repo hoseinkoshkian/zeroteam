@@ -109,27 +109,6 @@
     @apply px-4;
   }
 
-  .link-sm {
-    @apply underline underline-offset-2 decoration-z-blue decoration-2;
-  }
-  .link-nav {
-    @apply font-semibold underline underline-offset-8 decoration-z-content decoration-2;
-  }
-  .link-content {
-    @apply text-z-blue font-semibold underline underline-offset-2 decoration-2 decoration-[#C0CCFF];
-  }
-  /* .btn-z-yellow {
-    @apply px-5 py-2 text-white rounded-xl bg-z-yellow font-bold;
-  }
-  .btn-z-hover-yellow {
-  }
-  .btn-z-outline-blue {
-    @apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-blue text-z-blue font-bold;
-  }
-  .btn-z-outline-yellow {
-    @apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-yellow text-z-yellow font-bold;
-  } */
-
   /* .ss04 {
     -moz-font-feature-settings: "ss04";
     -webkit-font-feature-settings: "ss04";
