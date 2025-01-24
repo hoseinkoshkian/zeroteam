@@ -1,4 +1,3 @@
-
 import PostCards from "@components/PostCar/PostCards";
 import SearchBar from "@components/SearchBar/SearchBar";
 export default function Blog() {

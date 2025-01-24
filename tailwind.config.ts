@@ -13,8 +13,10 @@ const config: Config = {
       colors: {
         "z-blue": "#2A4EEB",
         "z-deep-blue": "#0F2A9F",
+        "z-low-blue": "#E7ECFF",
         "z-yellow": "#EB8A2A",
         "z-deep-yellow": "#BA6612",
+        "z-low-yellow": "#FFEDDC",
         "z-content": "#3D3D3D",
         "z-poor-content": "#AFAFAF",
         "z-border": "#EEEEEE",
@@ -57,6 +59,7 @@ const config: Config = {
   },
   plugins: [
     require("tailwind-scrollbar"),
+    require("@tailwindcss/typography"),
     plugin(({ addComponents, theme }) => {
       addComponents({
         ".btn-z-blue": {

@@ -164,7 +164,7 @@ export default function Header() {
       </header>
       {/* mobile */}
       <header>
-        <div className="lg:hidden py-8 grid grid-cols-3 items-center container mx-auto mobile-container">
+        <div className="lg:hidden py-4 grid grid-cols-3 items-center container mx-auto mobile-container">
           <Icon
             icon="heroicons:bars-3-bottom-right-solid"
             width={45}

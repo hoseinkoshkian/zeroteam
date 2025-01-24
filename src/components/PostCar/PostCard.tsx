@@ -21,8 +21,8 @@ export default function PostCard({
   profileSlug,
 }: PostCardProps) {
   return (
-    <Link href={"/"}>
-      <div className="post-card flex flex-col w-96 p-5 lg:w-80 lg:p-0 transition-all hover:scale-105 hover:transition-all hover:ease-out ">
+    <Link href={"/blog/artificial-intelligence"} className="relative hover:z-50">
+      <div className="post-card flex flex-col w-96 p-5 lg:w-80 lg:p-0 transition-all hover:scale-105 hover:transition-all hover:ease-out">
         <div className="post-image">
           <ExportedImage
             src={PostImage.src}
