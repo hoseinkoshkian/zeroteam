@@ -63,6 +63,9 @@ const config: Config = {
     require("@tailwindcss/typography"),
     plugin(({ addComponents, theme }) => {
       addComponents({
+        ".txt-regular": {
+          "@apply text-z-content text-justify leading-loose": {},
+        },
         ".btn-z-bg-gray": {
           "@apply px-5 py-2 text-z-content rounded-lg bg-z-border font-bold hover:bg-z-deep-border":
             {},

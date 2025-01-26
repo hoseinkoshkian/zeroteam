@@ -10,7 +10,7 @@ type ButtonSizes = "sm" | "base";
 interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   text: string;
   styles: ButtonStyles;
-  size: ButtonSizes;
+  size?: ButtonSizes;
   className?: string;
 }
 export default function Button({

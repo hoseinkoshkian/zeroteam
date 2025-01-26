@@ -11,7 +11,7 @@ import { tree } from "next/dist/build/templates/app-page";
 export default function Slider({
   slides,
 }: {
-  children: Readonly<React.ReactNode>;
+  children?: Readonly<React.ReactNode>;
   slides: React.ReactNode[];
 }) {
   const allowRender = slides.length == 0 ? false : true;

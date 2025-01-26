@@ -3,13 +3,13 @@ import ExportedImage from "next-image-export-optimizer";
 import PostImage from "@assets/post-card-image.jpg";
 import Link from "next/link";
 type PostCardProps = {
-  title: string;
-  readingTime: string;
-  author: string;
-  date: string;
-  image: string;
-  slug: string;
-  profileSlug: string;
+  title?: string;
+  readingTime?: string;
+  author?: string;
+  date?: string;
+  image?: string;
+  slug?: string;
+  profileSlug?: string;
 };
 export default function PostCard({
   title,
