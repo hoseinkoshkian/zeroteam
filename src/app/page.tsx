@@ -5,15 +5,6 @@ import coverImg from "../assets/cover.jpg";
 import BoxItem from "@components/BoxItem/BoxItem";
 import OrderItem from "@components/OrderItems/OrderItem";
 import ProjectSlider from "@components/Project Slider/ProjectSlider";
-import zeroLoadingGif from "@assets/zerolaoding.gif";
-// import Paths from "./components/OrderItems/Paths";
-
-// import styled from "styled-components";
-// const Title = styled.h1`
-//   font-size: 1.5em;
-//   text-align: center;
-//   color: #bf4f74;
-// `;
 export default function Main() {
   return (
     <div className="flex flex-col gap-16 lg:gap-20">
@@ -32,8 +23,8 @@ export default function Main() {
             همه چیز از یک <span className="text-z-yellow">صفر</span> شروع شد
           </h1>
           <div className="call-to-actions flex gap-5 justify-center">
-            <Button text="مسیر یادگیری" style="btn-z-outline-blue" />
-            <Button text="مشاوره رایگان" style="btn-z-outline-yellow" />
+            <Button text="مسیر یادگیری" styles="btn-z-outline-blue" />
+            <Button text="مشاوره رایگان" styles="btn-z-outline-yellow" />
           </div>
         </div>
 

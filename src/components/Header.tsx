@@ -4,9 +4,9 @@ import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import Button from "@shared/Button";
 import { Icon } from "@iconify/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import React, { SetStateAction } from "react";
-// import SetStateAction
+import { usePathname } from "next/navigation";
 type SideBarProps = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<SetStateAction<boolean>>;
@@ -54,43 +54,22 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
           />
         </div>
         <div className="side-items flex flex-col divide-y">
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
+          <Link
+            href={"/blog"}
+            className="side-item px-4 py-5 flex gap-2 items-center"
+          >
             <Icon
               icon="heroicons:academic-cap-16-solid"
               width={20}
               height={20}
               className="text-z-blue"
             />
-            <p className="font-bold">دوره های آموزشی</p>
-          </div>
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
-            <Icon
-              icon="heroicons:academic-cap-16-solid"
-              width={20}
-              height={20}
-              className="text-z-blue"
-            />
-            <p className="font-bold">مسیرهای یادگیری</p>
-          </div>
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
-            <Icon
-              icon="heroicons:academic-cap-16-solid"
-              width={20}
-              height={20}
-              className="text-z-blue"
-            />
-            <p className="font-bold">زیروبلاگ</p>
-          </div>
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
-            <Icon
-              icon="heroicons:academic-cap-16-solid"
-              width={20}
-              height={20}
-              className="text-z-blue"
-            />
-            <p className="font-bold">پروژه ها | showcase</p>
-          </div>
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
+            <p className="font-bold">مقاله ها</p>
+          </Link>
+          <Link
+            href={"/about-us"}
+            className="side-item px-4 py-5 flex gap-2 items-center"
+          >
             <Icon
               icon="heroicons:academic-cap-16-solid"
               width={20}
@@ -98,8 +77,11 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
               className="text-z-blue"
             />
             <p className="font-bold">درباره ما</p>
-          </div>
-          <div className="side-item px-4 py-5 flex gap-2 items-center">
+          </Link>
+          <Link
+            href={"/contact-us"}
+            className="side-item px-4 py-5 flex gap-2 items-center"
+          >
             <Icon
               icon="heroicons:academic-cap-16-solid"
               width={20}
@@ -107,6 +89,15 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
               className="text-z-blue"
             />
             <p className="font-bold">تماس با ما</p>
+          </Link>
+          <div className="side-item px-4 py-5 flex gap-2 items-center">
+            <Icon
+              icon="heroicons:academic-cap-16-solid"
+              width={20}
+              height={20}
+              className="text-z-blue"
+            />
+            <p className="font-bold">پروژه ها</p>
           </div>
         </div>
       </div>
@@ -115,12 +106,19 @@ export function SideBar({ isOpen, setIsOpen }: SideBarProps) {
 }
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  // console.log();
   function handleClick() {
     setIsOpen((prev) => !prev);
   }
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <>
       <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* {pathname.} */}
       {/* desktop */}
       <header className="py-8 hidden lg:block border-b border-b-z-border mb-10">
         <div className="lg:flex lg:items-center lg:text-sm lg:container lg:mx-auto lg:justify-between ">
@@ -164,7 +162,7 @@ export default function Header() {
       </header>
       {/* mobile */}
       <header>
-        <div className="lg:hidden py-4 grid grid-cols-3 items-center container mx-auto mobile-container">
+        <div className="lg:hidden py-4 grid grid-cols-3 items-center mb-5 container mx-auto mobile-container">
           <Icon
             icon="heroicons:bars-3-bottom-right-solid"
             width={45}

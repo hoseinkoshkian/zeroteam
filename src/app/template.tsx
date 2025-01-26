@@ -9,7 +9,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      {isRender && <Breadcrumb />}
+      {/* {isRender && <Breadcrumb />} */}
       {children}
     </>
   );

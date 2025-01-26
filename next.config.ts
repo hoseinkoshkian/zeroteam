@@ -1,8 +1,18 @@
 import type { NextConfig } from "next";
+// import Icons from "unplugin-icons/loaders";
 
 const nextConfig: NextConfig = {
   output: "export",
-
+  reactStrictMode: true,
+  // webpack(config) {
+  //   config.plugins.push(
+  //     Icons({
+  //       compiler: "jsx",
+  //       jsx: "react",
+  //     })
+  //   );
+  //   return config;
+  // },
   eslint: {
     ignoreDuringBuilds: true,
   },

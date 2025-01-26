@@ -20,6 +20,7 @@ const config: Config = {
         "z-content": "#3D3D3D",
         "z-poor-content": "#AFAFAF",
         "z-border": "#EEEEEE",
+        "z-deep-border": "#DFDEDE",
       },
       spacing: {
         sm: mobilePadding,
@@ -62,20 +63,24 @@ const config: Config = {
     require("@tailwindcss/typography"),
     plugin(({ addComponents, theme }) => {
       addComponents({
+        ".btn-z-bg-gray": {
+          "@apply px-5 py-2 text-z-content rounded-lg bg-z-border font-bold hover:bg-z-deep-border":
+            {},
+        },
         ".btn-z-blue": {
-          "@apply px-5 py-2 text-white rounded-xl bg-z-blue font-bold hover:bg-z-deep-blue":
+          "@apply px-5 py-2 text-white rounded-lg bg-z-blue font-bold hover:bg-z-deep-blue":
             {},
         },
         ".btn-z-yellow": {
-          "@apply px-5 py-2 text-white rounded-xl bg-z-yellow font-bold hover:bg-z-deep-yellow":
+          "@apply px-5 py-2 text-white rounded-lg bg-z-yellow font-bold hover:bg-z-deep-yellow":
             {},
         },
         ".btn-z-outline-blue": {
-          "@apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-blue text-z-blue font-bold":
+          "@apply px-5 py-2 text-white rounded-lg bg-white border-2 border-z-blue text-z-blue font-bold  hover:bg-z-low-blue":
             {},
         },
         ".btn-z-outline-yellow": {
-          "@apply px-5 py-2 text-white rounded-xl bg-white border-2 border-z-yellow text-z-yellow font-bold":
+          "@apply px-5 py-2 text-white rounded-lg bg-white border-2 border-z-yellow text-z-yellow font-bold  hover:bg-z-low-yellow":
             {},
         },
         ".link-content": {
